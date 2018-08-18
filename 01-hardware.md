@@ -53,7 +53,6 @@ Dispositivos de entrada/saída
     - Microfone
     - Câmera
     - Sensores
-    - ...
 
 
 
@@ -67,7 +66,6 @@ Dispositivos de entrada/saída
     - Impressora
     - Auto falante
     - Atuadores
-    - ...
 
 
 
@@ -76,7 +74,6 @@ Dispositivos de entrada/saída
 - Adaptadores de rede
 - Tela sensível ao toque
 - Dispositivos de armazenamento
-- ...
 
 
 
