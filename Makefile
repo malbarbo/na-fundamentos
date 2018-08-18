@@ -1,22 +1,16 @@
-.PHONY: all default clean
+.PHONY: default all pdf handout tex clean
 
-DEST=pdfs
+DEST_PDF=pdfs
+DEST_PDF_HANDOUT=pdfs/handout
+DEST_TEX=tex
 IGNORAR=README.md
-SOURCES=$(filter-out $(IGNORAR), $(wildcard *.md))
-PDFS=$(addprefix $(DEST)/, $(SOURCES:.md=.pdf))
+SOURCES=$(filter-out $(IGNORAR), $(sort $(wildcard *.md)))
+PDF=$(addprefix $(DEST_PDF)/, $(SOURCES:.md=.pdf))
+PDF_HANDOUT=$(addprefix $(DEST_PDF_HANDOUT)/, $(SOURCES:.md=.pdf))
+TEX=$(addprefix $(DEST_TEX)/, $(SOURCES:.md=.tex))
 PANDOC=./local/bin/pandoc
 PANDOC_VERSION=2.2.2.1
-
-default:
-	@echo Executando make em paralelo [$(shell nproc) tarefas]
-	@make -s -j $(shell nproc) all
-
-all: $(PDFS)
-
-$(DEST)/%.pdf: %.md templates/default.latex $(PANDOC) Makefile
-	@mkdir -p $(DEST)
-	@echo $@
-	@$(PANDOC) \
+PANDOC_CMD=$(PANDOC) \
 		--template templates/default.latex \
 		--toc \
 		--standalone \
@@ -24,13 +18,39 @@ $(DEST)/%.pdf: %.md templates/default.latex $(PANDOC) Makefile
 		-V institute:"Departamento de Informática\\\\Universidade Estadual de Maringá" \
 		-V theme:metropolis \
 		-V themeoptions:"numbering=fraction,subsectionpage=progressbar,block=fill" \
-		-t beamer \
-		-o $@ $<
+		-t beamer
+
+default:
+	@echo Executando make em paralelo [$(shell nproc) tarefas]
+	@make -s -j $(shell nproc) all
+
+all: $(PDF) $(PDF_HANDOUT) $(TEX)
+
+pdf: $(PDF)
+
+handout: $(PDF_HANDOUT)
+
+tex: $(TEX)
+
+$(DEST_PDF)/%.pdf: %.md templates/default.latex $(PANDOC) Makefile
+	@mkdir -p $(DEST_PDF)
+	@echo $@
+	@$(PANDOC_CMD) -o $@ $<
+
+$(DEST_PDF_HANDOUT)/%.pdf: %.md templates/default.latex $(PANDOC) Makefile
+	@mkdir -p $(DEST_PDF_HANDOUT)
+	@echo $@
+	@$(PANDOC_CMD) -V classoption:handout -o $@ $<
+
+$(DEST_TEX)/%.tex: %.md templates/default.latex $(PANDOC) Makefile
+	@mkdir -p $(DEST_TEX)
+	@echo $@
+	@$(PANDOC_CMD) -o $@ $<
 
 $(PANDOC):
 	mkdir -p local
 	curl -L https://github.com/jgm/pandoc/releases/download/$(PANDOC_VERSION)/pandoc-$(PANDOC_VERSION)-linux.tar.gz | tar xz -C local --strip-components=1
 
 clean:
-	@echo Removendo $(DEST)
-	@rm -rf $(DEST)
+	@echo Removendo $(DEST_PDF) e $(DEST_TEX)
+	@rm -rf $(DEST_PDF) $(DEST_TEX)
