@@ -14,7 +14,7 @@ que utilizam os mesmos algarismos que nós e o sistema de numeração deles foi
 criado baseado nos mesmos princípios que o nosso sistema decimal. Uma caixa
 fechada no mundo dos _humenos_ indica a quantidade de bombons dentro dela com
 a inscrição 25. Na contagem decimal dos humanos existem 19 bombons na caixa.
-Quantos dedos nas mãos têm os _humenos_?
+\pause Quantos dedos nas mãos têm os _humenos_?
 
 
 
@@ -106,7 +106,7 @@ Conversão de base
 
 - Decimal para outra base
     - Método das divisões sucessivas
-    - Exemplo da conversão de 24 na base decimal para binário
+    - Exemplo da conversão de 23 na base decimal para binário
 
     | Número | Divisor | Resultado | Resto|
     |:------:|:-------:|:---------:|:----:|
@@ -117,7 +117,7 @@ Conversão de base
     |    1   |    2    |     0     |   1  |
 
     - Ajuntando os restos de "baixo para cima" obtemos $10111$
-    - Portanto $24_{10} = 10111_2$
+    - Portanto $23_{10} = 10111_2$
 
 
 
