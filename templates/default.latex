@@ -196,14 +196,15 @@ $if(graphics)$
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
 \def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
 \makeatother
+
 % Centraliza as imagens
-\AtBeginDocument{%
-  \letcs\oig{@orig\string\includegraphics}%
-  \renewcommand<>\includegraphics[2][]{%
-    \only#3{%
-      {\centering\oig[{#1}]{#2}\par}%
-    }%
-  }%
+\AtBeginDocument{
+  \letcs\oig{@orig\string\includegraphics}
+  \renewcommand<>\includegraphics[2][]{
+    \only#3{
+      {\centering\oig[{#1}]{#2}\par}
+    }
+  }
 }
 
 % Scale images if necessary, so that they will not overflow the page
@@ -356,6 +357,7 @@ $endif$
 $endif$
 
 \usetikzlibrary{positioning}
+\usepackage{ccicons}
 
 \begin{document}
 $if(title)$
@@ -363,7 +365,12 @@ $if(beamer)$
 \begin{frame}[plain]
   \titlepage
   \begin{tikzpicture}[overlay, remember picture]
-    \node[above =0.1cm of current page.south] {\small{\url{http://malbarbo.pro.br}}};
+    \linespread{0.75}
+    \node[above =0.1cm of current page.south, align=center] {
+        \href{http://creativecommons.org/licenses/by-sa/4.0/}{\ccbysa}\\
+        \tiny Este trabalho está licenciado com uma Licença Creative Commons -
+        Atribuição-CompartilhaIgual 4.0 Internacional.
+    };
   \end{tikzpicture}
 \end{frame}
 $else$
