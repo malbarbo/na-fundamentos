@@ -40,8 +40,10 @@ Introdução
 
 . . .
 
-![](imagens/software-camadas.pdf){ height=5cm }
-
+![Camadas de um sistema computacional \novalinha
+\href{https://commons.wikimedia.org/wiki/File:Operating_system_placement.svg}
+{Por Golftheman [CC BY-SA 3.0] from Wikimedia Commons}
+](imagens/software-camadas.pdf){ height=4.5cm }
 
 
 Software de sistema
@@ -90,7 +92,7 @@ Software de sistema
 
 . . .
 
-![](imagens/gnome.png){ width=8cm }
+![](imagens/gnome.jpg){ width=8cm }
 
 ## Shell 
 

@@ -16,9 +16,12 @@ PANDOC_CMD=$(PANDOC) \
 		--toc \
 		--standalone \
 		-V author:"Marco A L Barbosa\\\\\\href{http://malbarbo.pro.br}{malbarbo.pro.br}" \
-		-V institute:"\\href{http://din.uem.br}{Departamento de Informática}\\\\\\href{http://www.uem.br}{Universidade Estadual de Maringá}{}" \
+		-V institute:"\\href{http://din.uem.br}{Departamento de Informática}\\\\\\href{http://www.uem.br}{Universidade Estadual de Maringá}" \
 		-V lang:pt-BR \
 		-V theme:metropolis \
+		-V header-includes:"\captionsetup[figure]{labelformat=empty,font=scriptsize,labelfont=scriptsize,justification=centering}" \
+		-V header-includes:"\usepackage{caption}" \
+		-V header-includes:"\newcommand{\\novalinha}{\\\\}" \
 		-V themeoptions:"numbering=fraction,subsectionpage=progressbar,block=fill" \
 		-t beamer
 
