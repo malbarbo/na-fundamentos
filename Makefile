@@ -19,15 +19,15 @@ PANDOC_CMD=$(PANDOC) \
 		-V institute:"\\href{http://din.uem.br}{Departamento de Informática}\\\\\\href{http://www.uem.br}{Universidade Estadual de Maringá}" \
 		-V lang:pt-BR \
 		-V theme:metropolis \
+		-V themeoptions:"numbering=fraction,subsectionpage=progressbar,block=fill" \
 		-V header-includes:"\captionsetup[figure]{labelformat=empty,font=scriptsize,labelfont=scriptsize,justification=centering}" \
 		-V header-includes:"\usepackage{caption}" \
 		-V header-includes:"\newcommand{\\novalinha}{\\\\}" \
-		-V themeoptions:"numbering=fraction,subsectionpage=progressbar,block=fill" \
 		-t beamer
 
 default:
 	@echo Executando make em paralelo [$(shell nproc) tarefas]
-	@make -s -j $(shell nproc) all
+	@make -s -j $(shell nproc) $(PDF) $(PDF_HANDOUT)
 
 all: $(PDF) $(PDF_HANDOUT) $(TEX)
 
@@ -45,7 +45,7 @@ $(DEST_PDF)/%.pdf: %.md templates/default.latex $(PANDOC) Makefile
 $(DEST_PDF_HANDOUT)/%.pdf: %.md templates/default.latex $(PANDOC) Makefile
 	@mkdir -p $(DEST_PDF_HANDOUT)
 	@echo $@
-	@$(PANDOC_CMD) -V classoption:handout -o $@ $<
+	@$(PANDOC_CMD) --pdf-engine=./bin/xelatex -V classoption:handout -o $@ $<
 
 $(DEST_TEX)/%.tex: %.md templates/default.latex $(PANDOC) Makefile
 	@mkdir -p $(DEST_TEX)
