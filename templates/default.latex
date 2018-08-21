@@ -359,6 +359,11 @@ $endif$
 \usetikzlibrary{positioning}
 \usepackage{ccicons}
 
+% Diminui o espaçamento dos items no sumário
+\makeatletter
+\patchcmd{\beamer@sectionintoc}{\vskip1.5em}{\vskip0.5em}{}{}
+\makeatother
+
 \begin{document}
 $if(title)$
 $if(beamer)$
