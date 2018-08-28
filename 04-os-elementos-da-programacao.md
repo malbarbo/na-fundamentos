@@ -546,7 +546,7 @@ Criação de tipos de dados
 
 ## Criação de tipos de dados
 
-Uma das formas de crias novos tipos de dados e a criação de tuplas nomeadas.
+Uma das formas de criar novos tipos de dados e a criação de tuplas nomeadas.
 A forma inicial de criação de novos tipos é:
 
 ```python
