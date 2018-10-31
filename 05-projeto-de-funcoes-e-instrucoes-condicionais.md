@@ -300,9 +300,9 @@ minutos e segundos.
 Para formar um triângulo a soma de qualquer duas medidas deve ser maior ou igual
 do que a terceira medida.
 
-@. Defina uma função que classifique o grau de obesidade de uma pessoa a partir
-do IMC. Os dados de entrada devem ser o peso e a altura da pessoa. Veja
-informações sobre IMC na
+@. Defina uma função que classifique a saúde de uma pessoa a partir do IMC. Os
+dados de entrada devem ser o peso e a altura da pessoa. Veja informações sobre
+IMC na
 \href{https://pt.wikipedia.org/wiki/\%C3\%8Dndice_de_massa_corporal}{Wikipédia}.
 
 
