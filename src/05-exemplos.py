@@ -19,7 +19,7 @@ def dobro(x):
 
 def par(x):
     '''
-    Inteiro positivo -> Boleano
+    Inteiro positivo -> Booleano
     Devolve True se x é um número par, isto é, se x é múltiplo de 2.
 
     Exemplos

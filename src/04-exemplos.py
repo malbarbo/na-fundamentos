@@ -1,5 +1,7 @@
 from typing import NamedTuple
 
+from doctest import testmod
+
 
 def segundos(horas, minutos, segundos):
     ''' Inteiro, Inteiro, Inteiro -> Inteiro
