@@ -460,6 +460,11 @@ Defina uma função que calcule o valor $e^x$, para um dado $x$, usando a série
 $$e^x = \sum_{n = 0}^{\infty} \frac{x^n}{n!} = \frac{x^0}{0!} + \frac{x^1}{1!} + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!} + \dots $$
 
 
+
+Atividades
+==========
+
+
 ## Atividades
 
 @. Dado dois número inteiros positivos $a$ e $b$, defina uma função que calcule
