@@ -10,7 +10,7 @@ PDF=$(addprefix $(DEST_PDF)/, $(SOURCES:.md=.pdf))
 PDF_HANDOUT=$(addprefix $(DEST_PDF_HANDOUT)/, $(SOURCES:.md=.pdf))
 TEX=$(addprefix $(DEST_TEX)/, $(SOURCES:.md=.tex))
 PANDOC=$(DEST)/bin/pandoc
-PANDOC_VERSION=2.2.2.1
+PANDOC_VERSION=2.4
 PANDOC_CMD=$(PANDOC) \
 		--template templates/default.latex \
 		--toc \
