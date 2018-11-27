@@ -8,7 +8,7 @@ Introdução
 
 ## Introdução
 
-- Quase todos as funções que vimos até agora devolvem resultados
+- Quase todas as funções que vimos até agora devolvem resultados
 
 - Por exemplo, a função `sum` que soma os valores de uma lista
 
@@ -25,6 +25,7 @@ Introdução
     ```python
     >>> xs = [1, 3, 7]
     >>> xs.append(4)
+    >>>
     ```
 
 - O fato de `append` não produzir resultado não tem relação com a forma que a
@@ -122,10 +123,18 @@ def soma1_no_primeiro(lst):
 >>> xs = [1, 2, 3]
 >>> soma1_no_primeiro(xs)
 >>> xs
+```
+\pause
+\vspace{-0.5cm}
+```python
 [2, 2, 3]
 >>> ys = [3, 2]
 >>> soma1_no_primeiro(ys)
 >>> ys
+```
+\pause
+\vspace{-0.5cm}
+```python
 [4, 2]
 ```
 
@@ -241,7 +250,6 @@ def soma_1_mod(xs):
 
 Funções com efeitos colaterais vs funções com resultados
 ========================================================
-
 
 ## Funções com efeitos colaterais vs funções com resultados
 
