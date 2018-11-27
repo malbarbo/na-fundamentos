@@ -1,1 +1,16 @@
+Falar em cada capitulo que alguns funções (como seno) estão disponiveis na
+biblioteca padrão.
+
+07 - Adicionar exemplo integral definida
+   - Adicionar exemplo método de newton para cálculo de raiz quadrada?
+
+11 - Expandir
+   - Falar de import
+   - Numpy
+   - matplotlib?
+
+- Recursividade?
+
 - Atribuir autoria as imagens
+
+- creation: line, crop, rotate, scale, translate, eventos de mouse
