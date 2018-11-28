@@ -462,4 +462,17 @@ Escreva um programa que receba como argumento o nome de um arquivo de pontos
 cartesianos e mostre os dois pontos mais distantes e a distância entre eles. O
 arquivo deve conter um ponto por linha (dois número separados por espaço).
 
+\pause
+
+Veja o arquivo `pontos-mais-distantes.py`
+
+\pause
+
+Execução do programa
+
+```
+$ python3 pontos-mais-distantes.py pontos.txt
+```
+
+
 <!-- TODO: Adicionar referências -->
