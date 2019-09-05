@@ -98,12 +98,12 @@ Dispositivos de armazenamento
 
 ## Dispositivos de armazenamento
 
-![HDD vs SSD \novalinha
+![HDD vs SSD \newline
 Por \url{https://ibexinc.wordpress.com/2010/02/13/the-death-of-the-disk/}](imagens/hdd-ssd.jpg)
 
 ## Dispositivos de armazenamento
 
-![Anatomia de um disco rígido \novalinha
+![Anatomia de um disco rígido \newline
 \href{https://commons.wikimedia.org/wiki/File:HardDiskAnatomy.jpg}{Por The
 original uploader was Ben pcc at English Wikipedia. (Transferred from
 en.wikipedia to Commons.) [Public domain], via Wikimedia

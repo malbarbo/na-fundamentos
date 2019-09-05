@@ -10,19 +10,13 @@ PDF=$(addprefix $(DEST_PDF)/, $(SOURCES:.md=.pdf))
 PDF_HANDOUT=$(addprefix $(DEST_PDF_HANDOUT)/, $(SOURCES:.md=.pdf))
 TEX=$(addprefix $(DEST_TEX)/, $(SOURCES:.md=.tex))
 PANDOC=$(DEST)/bin/pandoc
-PANDOC_VERSION=2.4
+PANDOC_VERSION=2.7.3
 PANDOC_CMD=$(PANDOC) \
+		--metadata-file metadata.yml \
 		--template templates/default.latex \
 		--toc \
 		--standalone \
-		-V author:"Marco A L Barbosa\\\\\\href{http://malbarbo.pro.br}{malbarbo.pro.br}" \
-		-V institute:"\\href{http://din.uem.br}{Departamento de Informática}\\\\\\href{http://www.uem.br}{Universidade Estadual de Maringá}" \
-		-V lang:pt-BR \
-		-V theme:metropolis \
-		-V themeoptions:"numbering=fraction,subsectionpage=progressbar,block=fill" \
-		-V header-includes:"\captionsetup[figure]{labelformat=empty,font=scriptsize,labelfont=scriptsize,justification=centering}" \
-		-V header-includes:"\usepackage{caption}" \
-		-V header-includes:"\newcommand{\\novalinha}{\\\\}" \
+		--pdf-engine=tectonic \
 		-t beamer
 
 default:
@@ -42,12 +36,12 @@ $(DEST_PDF)/%.pdf: %.md templates/default.latex $(PANDOC) Makefile
 	@echo $@
 	@$(PANDOC_CMD) -o $@ $<
 
-$(DEST_PDF_HANDOUT)/%.pdf: %.md templates/default.latex $(PANDOC) Makefile
+$(DEST_PDF_HANDOUT)/%.pdf: %.md templates/default.latex metadata.yml $(FIGS_DIR)/* $(PANDOC) Makefile
 	@mkdir -p $(DEST_PDF_HANDOUT)
 	@echo $@
-	@$(PANDOC_CMD) --pdf-engine=./bin/xelatex -V classoption:handout -o $@ $<
+	@$(PANDOC_CMD) -V classoption:handout -o $@ $<
 
-$(DEST_TEX)/%.tex: %.md templates/default.latex $(PANDOC) Makefile
+$(DEST_TEX)/%.tex: %.md templates/default.latex metadata.yml $(FIGS_DIR)/* $(PANDOC) Makefile
 	@mkdir -p $(DEST_TEX)
 	@echo $@
 	@$(PANDOC_CMD) -o $@ $<

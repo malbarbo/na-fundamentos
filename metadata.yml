@@ -1,0 +1,24 @@
+author:
+    - Marco A L Barbosa \newline \href{http://malbarbo.pro.br}{malbarbo.pro.br}
+institute:
+    - \href{http://din.uem.br}{Departamento de Informática} \newline \href{http://www.uem.br}{Universidade Estadual de Maringá}
+lang: pt-BR \
+toc-title: Conteúdo
+theme: metropolis
+themeoptions: numbering=fraction,sectionpage=simple
+header-includes: |
+    \usepackage{caption}
+    \captionsetup[figure]{labelformat=empty}
+    \usepackage{ccicons}
+    \usetikzlibrary{positioning}
+    \makeatletter
+    \patchcmd{\beamer@sectionintoc}{\vskip1.5em}{\vskip0.5em}{}{}
+    \makeatother
+    \AtBeginDocument{
+      \letcs\oig{@orig\string\includegraphics}
+      \renewcommand<>\includegraphics[2][]{
+        \only#3{
+          {\centering\oig[{#1}]{#2}\par}
+        }
+      }
+    }

@@ -40,7 +40,7 @@ Introdução
 
 . . .
 
-![Camadas de um sistema computacional \novalinha
+![Camadas de um sistema computacional \newline
 \href{https://commons.wikimedia.org/wiki/File:Operating_system_placement.svg}
 {Por Golftheman [CC BY-SA 3.0] from Wikimedia Commons}
 ](imagens/software-camadas.pdf){ height=4.5cm }
