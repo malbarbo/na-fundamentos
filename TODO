@@ -1,16 +1,18 @@
+Fazer make gerar todos os artefatos se target não estiver presente.
+
 Falar em cada capitulo que alguns funções (como seno) estão disponiveis na
 biblioteca padrão.
 
+Recursividade?
+
+Atribuir autoria as imagens.
+
+Biblioteca creation: line, crop, rotate, scale, translate, eventos de mouse.
+
 07 - Adicionar exemplo integral definida
    - Adicionar exemplo método de newton para cálculo de raiz quadrada?
+   - Repetição aninhada
+   - Troca de valores da lista. Atribuição múltipla vs valor temporário.
 
 11 - Expandir
    - Falar de import
-   - Numpy
-   - matplotlib?
-
-- Recursividade?
-
-- Atribuir autoria as imagens
-
-- creation: line, crop, rotate, scale, translate, eventos de mouse
