@@ -4,6 +4,7 @@ DEST=target
 DEST_PDF=$(DEST)/pdfs
 DEST_PDF_HANDOUT=$(DEST)/pdfs/handout
 DEST_TEX=$(DEST)/tex
+FIGS_DIR=imagens
 IGNORAR=README.md
 SOURCES=$(filter-out $(IGNORAR), $(sort $(wildcard *.md)))
 PDF=$(addprefix $(DEST_PDF)/, $(SOURCES:.md=.pdf))
@@ -31,7 +32,7 @@ handout: $(PDF_HANDOUT)
 
 tex: $(TEX)
 
-$(DEST_PDF)/%.pdf: %.md templates/default.latex $(PANDOC) Makefile
+$(DEST_PDF)/%.pdf: %.md templates/default.latex metadata.yml $(FIGS_DIR)/* $(PANDOC) Makefile
 	@mkdir -p $(DEST_PDF)
 	@echo $@
 	@$(PANDOC_CMD) -o $@ $<
