@@ -53,8 +53,7 @@ Dispositivos de entrada/saída
     - Microfone
     - Câmera
     - Sensores
-
-
+    - Tela sensível ao toque
 
 
 ## Dispositivos de saída
@@ -68,13 +67,10 @@ Dispositivos de entrada/saída
     - Atuadores
 
 
-
 ## Dispositivos de entrada e saída
 
 - Adaptadores de rede
-- Tela sensível ao toque
 - Dispositivos de armazenamento
-
 
 
 
@@ -96,10 +92,12 @@ Dispositivos de armazenamento
         - CD
         - DVD
 
+
 ## Dispositivos de armazenamento
 
 ![HDD vs SSD \newline
 Por \url{https://ibexinc.wordpress.com/2010/02/13/the-death-of-the-disk/}](imagens/hdd-ssd.jpg)
+
 
 ## Dispositivos de armazenamento
 
@@ -108,6 +106,15 @@ Por \url{https://ibexinc.wordpress.com/2010/02/13/the-death-of-the-disk/}](image
 original uploader was Ben pcc at English Wikipedia. (Transferred from
 en.wikipedia to Commons.) [Public domain], via Wikimedia
 Commons}](imagens/hdd-anatomia.jpg){ width=10cm }
+
+
+## Vídeos HDD
+
+- \url{https://en.wikipedia.org/wiki/File:HardDisk1.ogv}
+
+- \url{https://en.wikipedia.org/wiki/File:Harddrive-engineerguy.ogv} (Você pode
+  escolher a legenda em português clicando em cc)
+
 
 ## Dispositivos de armazenamento
 
@@ -166,18 +173,22 @@ Atividades
     - Tamanho da memória principal
     - Tipo de processador
 
+
+## Atividades
+
 @. Identifique em sua casa um dispositivo que contenha um sistema computacional
    de propósito específico e tente explicar:
     - Quais são as entrada do sistema
     - Qual é o processamento que o sistema realiza
     - Quais são as saídas do sistema
 
+
 ## Atividades
 
 Responda:
 
-@. Qual a utilidade de um sistema computacional sem dispositivos de saída?
-
 @. Qual a utilidade de um sistema computacional sem dispositivos de entrada?
+
+@. Qual a utilidade de um sistema computacional sem dispositivos de saída?
 
 @. Qual é a pergunta cuja a resposta é 42?
