@@ -9,8 +9,7 @@ Introdução
 
 ## Software
 
-- Coleção de dados e instruções que dizem o que o computador (hardware) deve fazer
-
+Coleção de dados e instruções que dizem o que o computador (hardware) deve fazer
 
 
 ## Licença
@@ -19,16 +18,20 @@ Introdução
 
 . . .
 
-- Proprietários
+- Software Proprietário
     - Foco nas restrições
+
     - Geralmente tem a execução restrita, não podem ser redistribuídos, modificados, etc
+
     - Suporte ao usuário geralmente fornecido pela empresa que vende/distribui o software
 
 . . .
 
-- Livres
+- Software Livre
     - Foco nas liberdades
+
     - Os usuários são livres para executar, redistribuir, modificar, estudar o código, etc
+
     - Suporte ao usuário geralmente fornecido pela comunidade de usuários e desenvolvedores
 
 
@@ -36,6 +39,7 @@ Introdução
 ## Tipos de software
 
 - Software de sistema
+
 - Software aplicativos
 
 . . .
@@ -52,66 +56,84 @@ Software de sistema
 ## Software de sistema
 
 - Sistema operacional
+
     - Gerencia os recursos do sistema
+
     - Provê serviços comuns para outros softwares
 
     . . .
 
     - Exemplos
+
         - Linux (Android, Debian GNU/Linux, Ubuntu, etc)
+
         - MacOS (Ios)
+
         - Windows
 
-. . .
+
+## Software de sistema
 
 - Utilitários
+
     - Ajudam a analisar, configurar e otimizar o sistema
 
     . . .
 
     - Exemplos
+
         - Antivírus
+
         - Gerenciadores de pacotes
+
         - Desfragmentadores de disco
 
 
-## Shell 
+## Shell
 
-- A iteração entre sistema operacional e o usuário é feita através de um
-  _Shell_
+- A iteração entre sistema operacional e o usuário é feita através de um _Shell_
+
 - Nos dispositivos moveis, o termo Lançador é usado ao invés de Shell
 
 
-## Shell 
+## Shell
 
 - Gráficos
     - Manipulação de janelas
+
     - Geralmente utilizam a metáfora de área de trabalho
+
     - Facilidade de uso e aprendizado
+
     - Menos poderosos
 
 . . .
 
 ![](imagens/gnome.jpg){ width=8cm }
 
-## Shell 
+
+## Shell
 
 - Textuais
     - Comandos descritos por texto
-    - Mais difícil de aprender e usar
-    - Mais agilidade
-    - Mais poderoso
+
+    - Mais difíceis de aprender e usar
+
+    - Mais ágeis
+
+    - Mais poderosos
 
 . . .
 
 <div class="columns">
   <div class="column" width="60%">
-![](imagens/terminal.png){ width=7cm } 
+![](imagens/terminal.png){ width=7cm }
   </div>
   <div class="column" width="30%">
 ![](imagens/termux-python.png){ width=3cm }
   </div>
 </div>
+
 
 
 Softwares aplicativo
@@ -123,8 +145,11 @@ Softwares aplicativo
 - Realiza um conjunto de funções e tarefas que atendem as necessidades do usuário
 
 - Exemplos
+
     - Editores de texto
+
     - Planilhas eletrônicas
+
     - Navegadores da internet
 
 
@@ -134,27 +159,42 @@ Desenvolvimento de software
 
 ## Desenvolvimento de software
 
-- Em geral os programas são descritos de forma textual usando uma linguagem de
-  programação
+- Os programas são geralmente descritos de forma textual usando uma linguagem de programação
+
+
+## Desenvolvimento de software
 
 - Uma linguagem de programação pode ser
-  - Compilada
-    - C/C++
-    - Java
-    - Pascal
-  - Interpretada
-    - Python
-    - Javascript
-    - Lua
+
+    - Compilada
+
+        - C/C++
+
+        - Java
+
+        - Pascal
+
+    - Interpretada
+
+        - Python
+
+        - JavaScript
+
+        - Lua
+
 
 ## Compilação
 
-- Um compilador transforma o código (texto) do programa em um arquivo
-  diretamente executável pelo processador
+- Um compilador transforma o código (texto) do programa em um arquivo diretamente executável pelo processador
+
 - Execução eficiente
+
 - Ciclo de desenvolvimento lento (tem que esperar o compilador)
 
-    . . .
+
+## Exemplo
+
+- Linguagem C
 
     - Código do programa
 
@@ -165,22 +205,32 @@ Desenvolvimento de software
         }
         ```
 
-    - Compilação seguida da execução
+    - Compilação
 
-        ```bash
+        ```sh
         $ cc -o ola ola.c
+        ```
+
+    - Execução
+
+        ```sh
         $ ./ola
         Olá mundo
         ```
 
+
 ## Interpretação pura
 
-- Um interpretador lê o código do programa e executa diretamente as
-  instruções descritas nele
+- Um interpretador lê o código do programa e executa diretamente as  instruções descritas nele
+
 - Execução menos eficiente
+
 - Ciclo de desenvolvimento mais rápido (não precisa esperar o compilador)
 
-    . . .
+
+## Exemplo
+
+- Linguagem Python
 
     - Código do programa
 
@@ -196,35 +246,50 @@ Desenvolvimento de software
         ```
 
 
+
 Atividades
 ==========
 
+
 ## Atividades
 
-@. Identifique o sistema operacional do seu computador ou _smartphone_. Inclua a
-versão, o desenvolvedor e o tipo de licença.
+@. Identifique o sistema operacional do seu computador ou _smartphone_. Inclua a versão, o desenvolvedor e o tipo de licença.
 
 @. Liste os softwares livres que você utiliza.
 
-@. Experimente um shell textual no seu computador ou _smartphone_ e relate como
-foi a sua experiência.
+@. Experimente um shell textual no seu computador ou _smartphone_ e relate como foi a sua experiência.
 
-@. Experimente um shell gráfico alternativo no seu computador ou _smartphone_ e
-relate como foi a sua experiência.
+@. Experimente um shell gráfico alternativo no seu computador ou _smartphone_ e relate como foi a sua experiência.
+
 
 ## Atividades
 
-@. Experimente algum software utilitário no seu computador ou _smartphone_ e
-relate como foi a sua experiência. Inclua a identificação e o propósito do
-software.
+@. Experimente algum software utilitário no seu computador ou _smartphone_ e relate como foi a sua experiência. Inclua a identificação e o propósito do software.
 
-@. Selecione três softwares que você utiliza e pesquise em quais linguagens de
-programação eles foram escritos.
+@. Selecione três softwares que você utiliza e pesquise em quais linguagens de programação eles foram escritos.
 
-@. Selecione três softwares proprietários que você utiliza e pesquise
-alternativas em software livre.
+@. Selecione três softwares proprietários que você utiliza e pesquise alternativas em software livre.
 
-@. Experimente o interpretador interativo do Python disponível em
-\url{https://www.python.org/shell/}. Digite algumas expressões aritméticas
-seguida de enter. Digite `print("")` com algum texto entre as aspas. O que
-acontece?
+@. Experimente o interpretador interativo do Python disponível em \url{https://www.python.org/shell/}. Digite algumas expressões aritméticas seguida de enter. Digite `print("")` com algum texto entre as aspas. O que acontece?
+
+
+
+Referências
+===========
+
+
+## Referências
+
+- \url{https://pt.wikipedia.org/wiki/Software_proprietário}
+
+- \url{https://pt.wikipedia.org/wiki/Software_livre}
+
+- \url{https://pt.wikipedia.org/wiki/Software_de_sistema}
+
+- \url{https://pt.wikipedia.org/wiki/Software_aplicativo}
+
+- \url{https://pt.wikipedia.org/wiki/Software_utilitário}
+
+- \url{https://pt.wikipedia.org/wiki/Shell_(computação)}
+
+- \url{https://pt.wikipedia.org/wiki/Linguagem_de_programação}
