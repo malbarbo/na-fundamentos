@@ -13,6 +13,7 @@ TEX=$(addprefix $(DEST_TEX)/, $(SOURCES:.md=.tex))
 PANDOC=$(DEST)/bin/pandoc
 PANDOC_VERSION=2.7.3
 PANDOC_CMD=$(PANDOC) \
+		-V mathspec \
 		--metadata-file metadata.yml \
 		--template templates/default.latex \
 		--toc \
