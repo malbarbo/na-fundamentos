@@ -12,10 +12,31 @@ Em um universo virtual existe um planeta semelhante ao nosso. Os seres
 inteligentes desse planeta são os _humenos_. Os seres _humenos_ são humanoides
 que utilizam os mesmos algarismos que nós e o sistema de numeração deles foi
 criado baseado nos mesmos princípios que o nosso sistema decimal. Uma caixa
-fechada no mundo dos _humenos_ indica a quantidade de bombons dentro dela com
-a inscrição 25. Na contagem decimal dos humanos existem 19 bombons na caixa.
+fechada no mundo dos _humenos_ indica a quantidade de bombons dentro dela com a
+inscrição $25$. Na contagem decimal dos humanos existem $19$ bombons na caixa.
 \pause Quantos dedos nas mãos têm os _humenos_?
 
+
+## Solução
+
+Vamos pensar de maneira simples o que o número $19$ significa para nós humanos.
+Como usamos as mãos para contar, e a quantidade de dedos nelas é limitada, nós
+criamos uma forma de contar além da quantidade dos dedos das mãos. Neste
+contexto, $19$ significa que contamos uma vez todos os dedos das mãos ($10$) e
+mais nove unidades ($9$ dedos). Podemos interpretar outros números desta forma
+também. Por exemplo, $42$ significa que contamos todos os dedos das mãos quatro
+vezes e mais duas unidades ($4 \times 10 + 2 = 42$).
+
+
+## Solução
+
+Se pensarmos que os seres _humenos_ usam um sistema como o nosso, podemos
+descobrir quantos dedos eles têm usando as informações do problema. O valor
+$25$ para os _humenos_ significa que eles contaram os dedos das mãos $2$ vezes
+e mais $5$ unidades. Então, considerando que eles usam os mesmos algarismos que
+nós, e que portando o $2$ e o $5$ isolados representam a mesma quantidade para
+eles e nós, podemos concluir que $2 \times \text{(quantidade de dedos das
+mãos)} + 5 = 19$. Ou seja, os _humenos_ têm 7 dedos nas mãos.
 
 
 ## Sistema de numeração
@@ -23,10 +44,10 @@ a inscrição 25. Na contagem decimal dos humanos existem 19 bombons na caixa.
 - Notação para representar números de um dado conjunto de forma consistente
 
 - Exemplos
-   - Sistema de numeração Romano
-   - Sistema de numeração unário (cada número natural é representado pelo
-     número de símbolos correspondente)
-   - Sistema de numeração Hindu-Arábico (nosso sistema decimal)
+    - Sistema de numeração Romano
+    - Sistema de numeração unário (cada número natural é representado pelo
+      número de símbolos correspondente)
+    - Sistema de numeração Hindu-Arábico (nosso sistema decimal)
 
 
 
@@ -36,13 +57,14 @@ Sistemas de numeração posicional
 ## Notação posicional
 
 - O nosso sistema decimal utiliza notação posicional
-   - O valor de cada dígito (algarismo) é determinado pela sua posição
-   - O valor do número representado é a soma do valor atribuído a cada dígito
-     do número
+    - O valor de cada dígito (algarismo) é determinado pela sua posição
+    - O valor do número representado é a soma do valor atribuído a cada dígito
+      do número
+
 
 ## Notação posicional
 
-- Por exemplo, cada dígito do número 6737 tem um valor que depende da sua
+- Por exemplo, cada dígito do número $6737$ tem um valor que depende da sua
   posição
 
 $$
@@ -54,7 +76,6 @@ $$
  6737  & = &    6000    & + &    700     & + &     30     & + &      7
 \end{array}
 $$
-
 
 
 ## Base de um sistema de numeração
@@ -70,32 +91,31 @@ $$
 
 - O valor de um número representado na base $b$ pela sequência de dígitos $d_m
   d_{m-1} \dots d_1 d_0$ é
-$$ d_m \times b^m + d_{m-1} \times b^{m - 1} + \cdots + d_1 \times b^1 + d_0 \times b^0$$
 
+  $$d_m \times b^m + d_{m-1} \times b^{m - 1} + \cdots + d_1 \times b^1 + d_0 \times b^0$$
 
 
 ## Sistemas de numeração em computação
 
 - Na computação é comum o uso de outras bases:
-   - Binária (base 2)
-      - $0, 1$
-   - Octal (base 8)
-      - $0, 1, 2, 3, 4, 5, 6, 7$
-      - Usado para "abreviar" número binários (três dígitos binários
-        correspondem a um dígito octal)
-   - Hexadecimal (base 16)
-      - $0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, D$
-      - Usado para "abreviar" número binários (quadro dígitos binários
-        correspondem a um dígito hexadecimal)
-
+    - Binária (base $2$)
+        - $0, 1$
+    - Octal (base $8$)
+        - $0, 1, 2, 3, 4, 5, 6, 7$
+        - Usado para "abreviar" número binários (três dígitos binários
+          correspondem a um dígito octal)
+    - Hexadecimal (base $16$)
+        - $0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F$
+        - Usado para "abreviar" número binários (quadro dígitos binários
+          correspondem a um dígito hexadecimal)
 
 
 ## Sistemas de numeração em computação
 
 - No nível mais básico, os computadores modernos lidam apenas com o sistema
   binário
-   - Todos dados armazenados e processados são descritos por uma sequência de
-     dígitos binários
+    - Todos dados armazenados e processados são descritos por uma sequência de
+      dígitos binários
 
 
 
@@ -146,44 +166,44 @@ Unidades de medidas de informação
 
 - Um _bit_ (dígito binário) é a unidade básica de informação usada na
   computação
-   - Pode armazenar um de dois valores distintos (0 ou 1)
+    - Pode armazenar um de dois valores distintos ($0$ ou $1$)
 
-- Um _byte_ é uma sequência de 8 bits
-   - Pode armazenar um de $2^8 = 256$ valores distintos
+- Um _byte_ é uma sequência de $8$ bits
+    - Pode armazenar um de $2^8 = 256$ valores distintos
 
 
 ## Múltiplos (sistema internacional)
 
-Nome     | Símbolo | Múltiplo | Quantidade
----------|---------|----------|----------
-bit      |   b     |   10^0   | 1
-kilobit  |   kb    |   10^3   | 1.000
-megabit  |   Mb    |   10^6   | 1.000.000
-gigabit  |   Gb    |   10^9   | 1.000.000.000
+Nome     | Símbolo | Múltiplo   | Quantidade
+---------|---------|------------|----------
+bit      |   b     |   $10^0$   | $1$
+kilobit  |   kb    |   $10^3$   | $1.000$
+megabit  |   Mb    |   $10^6$   | $1.000.000$
+gigabit  |   Gb    |   $10^9$   | $1.000.000.000$
 
-Nome     | Símbolo | Múltiplo | Quantidade
----------|---------|----------|----------
-byte     |   B     |   10^0   | 1
-kilobyte |   kB    |   10^3   | 1.000
-megabyte |   MB    |   10^6   | 1.000.000
-gigabyte |   GB    |   10^9   | 1.000.000.000
+Nome     | Símbolo | Múltiplo   | Quantidade
+---------|---------|------------|----------
+byte     |   B     |   $10^0$   | 1
+kilobyte |   kB    |   $10^3$   | 1.000
+megabyte |   MB    |   $10^6$   | 1.000.000
+gigabyte |   GB    |   $10^9$   | 1.000.000.000
 
 
 ## Múltiplos (JEDEC / IEC)
 
-Nome              | Símbolo | Múltiplo | Quantidade
-------------------|---------|----------|----------
-bit               |   b     |   2^0    | 1
-kilobit/kibibit   |   kib   |   2^10   | 1.024
-megabit/mebibit   |   Mib   |   2^20   | 1.048.576
-gigabit/gibibit   |   Gib   |   2^30   | 1.073.741.824
+Nome              | Símbolo | Múltiplo     | Quantidade
+------------------|---------|--------------|----------
+bit               |   b     |   $2^0$      | 1
+kilobit/kibibit   |   kib   |   $2^{10}$   | 1.024
+megabit/mebibit   |   Mib   |   $2^{20}$   | 1.048.576
+gigabit/gibibit   |   Gib   |   $2^{30}$   | 1.073.741.824
 
-Nome              | Símbolo | Múltiplo | Quantidade
-------------------|---------|----------|----------
-byte              |   B     |   2^0    | 1
-kilobyte/kibibyte |   kiB   |   2^10   | 1.024
-megabyte/mebibyte |   MiB   |   2^20   | 1.048.576
-gigabyte/gibibyte |   GiB   |   2^30   | 1.073.741.824
+Nome              | Símbolo | Múltiplo     | Quantidade
+------------------|---------|--------------|----------
+byte              |   B     |   $2^0$      | 1
+kilobyte/kibibyte |   kiB   |   $2^{10}$   | 1.024
+megabyte/mebibyte |   MiB   |   $2^{20}$   | 1.048.576
+gigabyte/gibibyte |   GiB   |   $2^{30}$   | 1.073.741.824
 
 
 
@@ -202,17 +222,26 @@ Atividades
 @. Converta os seguintes números para decimal:
     - $1011001_2$
     - $161721_8$
-    - FFA0$_{16}$
+    - $FFA0_{16}$
 
 @. Converta os seguintes números para binário, octal e hexadecimal:
-    - 1234
-    - 4321
-    - 1001
+    - $1234$
+    - $4321$
+    - $1001$
 
 ## Atividades
 
-@. Quantos números distintos é possível representar no sistema decimal
-   com 1, 5 e 10 dígitos?
+@. Quantos valores distintos é possível representar no sistema decimal
+   com $1$, $5$ e $10$ dígitos?
 
-@. Quantos números distintos é possível representar no sistema binário com 1,
-   8, 16, 32 e 64 bits?
+@. Quantos valores distintos é possível representar no sistema binário com $1$,
+   $8$, $16$, $32$ e $64$ bits?
+
+
+
+Referências
+===========
+
+## Referências
+
+- \url{https://pt.wikipedia.org/wiki/Notação_posicional}
