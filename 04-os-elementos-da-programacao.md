@@ -540,8 +540,6 @@ Criação de funções
 Uma das formas de compor novas operações e a criação de funções. A forma
 inicial de criação de funções é
 
-\ 
-
 ```python
 def nome_da_funcao(parametro1, parametro2, ...):
     return expressao
@@ -688,6 +686,18 @@ Definição da função
 def distancia(p1, p2):
     return ((p1.x - p2.x) ** 2 + (p1.y - p2.y) ** 2) ** 0.5
 ```
+
+
+Atividades
+==========
+
+## Atividades
+
+@. Instale o [Editor Mu](https://codewith.mu/) no seu computador ou
+   [QPython3](https://play.google.com/store/apps/details?id=org.qpython.qpy3&hl=en)
+   no seu _smartphone_ e use a área de interações para testar algumas expressões.
+
+@. Teste os exemplos de criação de função e tipo de dados.
 
 
 ## Leitura recomendada
