@@ -18,8 +18,8 @@ PANDOC_CMD=$(PANDOC) \
 		--template templates/default.latex \
 		--toc \
 		--standalone \
-		--pdf-engine=tectonic \
-		-t beamer
+		--pdf-engine tectonic \
+		--to beamer
 
 default:
 	@echo Executando make em paralelo [$(shell nproc) tarefas]
