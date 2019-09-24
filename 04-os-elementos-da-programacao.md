@@ -1,5 +1,5 @@
 ---
-# vim: set spell spelllang=pt_br sw=4:
+# vim: set spell spelllang=pt_br:
 title: Os elementos da programação
 ---
 
@@ -215,7 +215,7 @@ o acrônimo PEMDAS para lembrar
 - **M**ultiplicação e **D**ivisão
 - **A**dição e **S**ubtração
 
-Operadores com a mesma precedência são avaliados da direita para a esquerda,
+Operadores com a mesma precedência são avaliados da esquerda para a direita,
 exceto a exponenciação.
 
 
