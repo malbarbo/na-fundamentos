@@ -245,3 +245,5 @@ Referências
 ## Referências
 
 - \url{https://pt.wikipedia.org/wiki/Notação_posicional}
+
+- [Vídeo: Sistema binário e representação de dados](https://www.khanacademy.org/computing/computer-science/how-computers-work2/v/khan-academy-and-codeorg-binary-data)
