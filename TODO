@@ -1,3 +1,5 @@
+Adicionar links para vídeos aulas
+
 Fazer make gerar todos os artefatos se target não estiver presente.
 
 Falar em cada capitulo que alguns funções (como seno) estão disponiveis na
@@ -9,10 +11,20 @@ Atribuir autoria as imagens.
 
 Biblioteca creation: line, crop, rotate, scale, translate, eventos de mouse.
 
+
 00 - Motivação. Porque computação é importante para o curso?
 
 01 - Mais figuras, dispositivos, memória, processador, etc
    - System On Chip
+   - Adicionar referências
+
+04 - Usar dataclass ao invés de NamedTuple
+   - Convensão de nomes (não pode ter acento, espaço, etc)
+   - Comentários
+   - Identação?
+
+05 - Falar de retornos múltiplos
+   - Debug
    - Adicionar referências
 
 07 - Adicionar exemplo integral definida
