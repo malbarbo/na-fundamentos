@@ -1,49 +1,6 @@
 from doctest import testmod
 
 
-def par(x):
-    '''
-    Número -> Booleano
-    Devolve True se x é um número par, isto é, se x é múltiplo de 2.
-    Exemplos
-    >>> par(7)
-    False
-    >>> par(4)
-    True
-    '''
-    return x % 2 == 0
-
-
-def impar(x):
-    '''
-    Número -> Booleano
-    Devolve True se x é um número impar, False caso contrário.
-    Exemplos
-    >>> impar(7)
-    True
-    >>> impar(4)
-    False
-    '''
-    return not par(x)
-
-
-def impar_alternativa(x):
-    '''
-    Número -> Booleano
-    Devolve True se x é um número impar, False caso contrário.
-    Exemplos
-    >>> impar_alternativa(7)
-    True
-    >>> impar_alternativa(4)
-    False
-    '''
-    if par(x):
-        r = False
-    else:
-        r = True
-    return r
-
-
 def salario(horas):
     '''
     Número -> Número
@@ -55,61 +12,6 @@ def salario(horas):
     1000
     '''
     return 50 * horas
-
-
-def converte3(unidade, dezena, centena):
-    '''
-    Número, Número, Número -> Número
-    Converte os valores da unidade, da dezena e da centena para um número
-    composto por estes dígitos.
-    Exemplos
-    >>> converte3(6, 7, 2)
-    276
-    >>> converte3(1, 2, 3)
-    321
-    '''
-    return centena * 100 + dezena * 10 + unidade * 1
-
-
-def converte_hms(segundos):
-    '''
-    Número -> Número, Número, Número
-    Converte um tempo dado em segundos para horas, minutos, segundos.
-    Exemplos
-    >>> converte_hms(304)
-    (0, 5, 4)
-    >>> converte_hms(4212)
-    (1, 10, 12)
-    >>> converte_hms(7456)
-    (2, 4, 16)
-    '''
-    h = segundos // 3600
-    m = (segundos % 3600) // 60
-    s = (segundos % 3600) % 60
-    return (h, m, s)
-
-
-def eh_triangulo(a, b, c):
-    '''
-    Número, Número, Número -> Booleano
-    Devolve True se três medidas podem formar um triângulo, False caso
-    contrário. Para forma um triângulo a soma de duas medidas quaisquer deve
-    ser maior ou igual do que a outro medida.
-    Exemplos
-    >>> eh_triangulo(3, 4, 5)
-    True
-    >>> eh_triangulo(6, 4, 3)
-    True
-    >>> eh_triangulo(4, 7, 3)
-    True
-    >>> eh_triangulo(3, 1, 5)
-    False
-    >>> eh_triangulo(4, 8, 2)
-    False
-    >>> eh_triangulo(6, 1, 3)
-    False
-    '''
-    return a + b >= c and a + c >= b and b + c >= a
 
 
 def novo_salario(salario):

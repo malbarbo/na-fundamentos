@@ -47,10 +47,10 @@ def maximo(x, y):
     -4
     '''
     if x > y:
-        maxi = x
+        max = x
     else:
-        maxi = y
-    return maxi
+        max = y
+    return max
 
 
 def maximo3v1(x, y, z):
@@ -76,15 +76,15 @@ def maximo3v1(x, y, z):
     '''
     if x >= y:
         if x >= z:
-            m = x
+            max = x
         else:
-            m = z
+            max = z
     else:
         if y >= z:
-            m = y
+            max = y
         else:
-            m = z
-    return m
+            max = z
+    return max
 
 
 def maximo3v2(x, y, z):
@@ -111,13 +111,13 @@ def maximo3v2(x, y, z):
     3
     '''
     if x >= y and x >= z:
-        m = x
+        max = x
     else:
         if y >= x and y >= z:
-            m = y
+            max = y
         else:
-            m = z
-    return m
+            max = z
+    return max
 
 
 def maximo3v3(x, y, z):
@@ -142,12 +142,12 @@ def maximo3v3(x, y, z):
     4
     '''
     if x >= y and x >= x:
-        m = x
+        max = x
     elif y >= x and y >= z:
-        m = y
+        max = y
     else:
-        m = z
-    return m
+        max = z
+    return max
 
 
 def maximo3(x, y, z):
@@ -174,29 +174,26 @@ def maximo3(x, y, z):
     return maximo(x, maximo(y, z))
 
 
-def soma_quadrado_maiores(x, y, z):
+def proxima_cor_semaforo(cor_atual):
     '''
-    Número, Número, Número -> Número
-    Calcula a soma dos quadrados nos dois maiores valores entre x, y, z.
+    String -> String
+    Devolve a próxima cor que será mostrada em um semáforo dado a cor_atual.
 
     Exemplos
-    >>> soma_quadrado_maiores(3, 2, 1)
-    13
-    >>> soma_quadrado_maiores(3, 2, 4)
-    25
-    >>> soma_quadrado_maiores(2, 3, 5)
-    34
+    >>> proxima_cor_semaforo('verde')
+    'amarelo'
+    >>> proxima_cor_semaforo('amarelo')
+    'vermelho'
+    >>> proxima_cor_semaforo('vermelho')
+    'verde'
     '''
-    if x >= z and y >= z:
-        m1 = x
-        m2 = y
-    elif x >= y and z >= y:
-        m1 = x
-        m2 = z
+    if cor_atual == 'verde':
+        cor_prox = 'amarelo'
+    elif cor_atual == 'amarelo':
+        cor_prox = 'vermelho'
     else:
-        m1 = y
-        m2 = z
-    return m1 ** 2 + m2 ** 2
+        cor_prox = 'verde'
+    return cor_prox
 
 
 def classifica_triangulo(a, b, c):
@@ -204,7 +201,7 @@ def classifica_triangulo(a, b, c):
     Número, Número, Número -> String
     Classifica um triângulo de acordo com as medidas a, b e c do seus lados.
     Um triângulo com os três lados iguais é equilátero. Um triângulo com dois
-    lados iguais é escaleno e um triângulo com os três lados diferentes é
+    lados iguais é isósceles e um triângulo com os três lados diferentes é
     escaleno.
 
     Exemplos
