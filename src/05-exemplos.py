@@ -1,6 +1,8 @@
 from doctest import testmod
 
 
+# Exemplo 1
+
 def dobro(x):
     '''
     Número -> Número
@@ -17,6 +19,8 @@ def dobro(x):
     return 2 * x
 
 
+# Exemplo 2
+
 def par(x):
     '''
     Inteiro positivo -> Booleano
@@ -30,6 +34,31 @@ def par(x):
     '''
     return x % 2 == 0
 
+
+# Exemplo 3
+
+def hms(segundos):
+    '''
+    Inteiro -> Inteiro, Inteiro, Inteiro
+    Tipos e descrição omitidos para economizar espaço...
+    Exemplos
+    >>> # 70 // 3600 equivale a 0 hora e sobra 70 segundos
+    >>> # 70 // 60 equivale a 1 minuto e sobra 10 segundos
+    >>> hms(70)
+    (0, 1, 10)
+    >>> # 10798 // 3600 equivale a 2 horas e sobra 3598 segundos
+    >>> # 3598 // 60 equivale a 59 minutos e sobra 58 segundos
+    >>> hms(10798)
+    (2, 59, 58)
+    '''
+    h = segundos // 3600
+    sobra = segundos % 3600
+    m = sobra // 60
+    s = sobra % 60
+    return (h, m, s)
+
+
+# Exemplo 4
 
 def maximo(x, y):
     '''
@@ -174,6 +203,8 @@ def maximo3(x, y, z):
     return maximo(x, maximo(y, z))
 
 
+# Exemplo 5
+
 def proxima_cor_semaforo(cor_atual):
     '''
     String -> String
@@ -195,6 +226,8 @@ def proxima_cor_semaforo(cor_atual):
         cor_prox = 'verde'
     return cor_prox
 
+
+# Exemplo 6
 
 def classifica_triangulo(a, b, c):
     '''
@@ -224,6 +257,8 @@ def classifica_triangulo(a, b, c):
         tipo = 'isósceles'
     return tipo
 
+
+# Exemplo 7
 
 def baskara(a, b, c):
     '''
