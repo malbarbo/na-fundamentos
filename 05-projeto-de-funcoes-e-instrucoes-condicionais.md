@@ -159,6 +159,22 @@ iterações
 ```
 
 
+## Exemplo 1
+
+Se você não estiver usando o Editor Mu (por exemplo, você está usando
+o QPython3 no telefone), você pode testar a função escrevendo o seguinte no
+final do arquivo (depois de todos as definições de funções) e executando
+o programa
+
+```python
+print(dobro(3))
+print(dobro(-2.1))
+```
+
+**Observe atentamente o que vai aparecer escrito na tela!** Cada linha
+corresponde a um resultado.
+
+
 
 # Testes automatizados
 
@@ -181,6 +197,16 @@ O Python pode verificar automaticamente se todos os exemplos estão corretos
     >>> testmod()
     TestResults(failed=0, attempted=2)
     ```
+
+
+## Testes automatizados
+
+Se você não estiver usando o Editor Mu, você pode executar os testes
+automatizados escrevendo o seguinte no final do arquivo e executando o programa
+
+```python
+print(testmod())
+```
 
 
 ## Testes automatizados
