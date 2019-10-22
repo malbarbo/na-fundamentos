@@ -55,11 +55,11 @@ Para todas as linhas, exceto a primeira
 
 - Veremos como expressar este tipo de processo com funções em Python
 
-- Para isso precisamos entender dois conceitos
+- Para isso precisamos
 
-    - Variáveis
+    - De instruções de repetição
 
-    - Instruções de repetição
+    - Aprimorar nosso entendimento de variáveis
 
 
 
@@ -87,6 +87,9 @@ Variáveis
     - Na célula de memória associada com a variável é armazenado um valor
       (número, string, etc)
 
+
+## Variáveis
+
 - O fato de uma variável corresponder a uma célula de memória tem duas
   implicações
 
@@ -102,6 +105,8 @@ Considere o seguinte exemplo
 
 \small
 
+<div class="columns">
+<div class="column" width="50%">
 ```python
 >>> x = 10
 >>> y = x
@@ -109,45 +114,69 @@ Considere o seguinte exemplo
 10
 >>> y
 10
+```
+
+\pause
+
+```python
 >>> x = 20
 >>> x
 20
 >>> y
-10
->>> x = x + 3
->>> x
-23
 ```
 
+\pause
+
+```python
+10
+```
+</div>
+
+\pause
+
+<div class="column" width="50%">
+```python
+>>> x = x + 3
+>>> x
+```
+
+\pause
+
+```python
+23
+```
+</div>
+</div>
+
 
 ## Variáveis
 
-- Quando a instrução `x = 10` é executado o Python reserva uma célula de
-  memória para o valor 10 e associa esta célula ao nome `x`
+- Quando a instrução `x = 10`{.python} é executado o Python reserva uma célula
+  de memória para o valor `10`{.python} e associa esta célula ao nome `x`
 
-- Quando a instrução `y = x` é executada a célula de memória associada com `x`
-  passa também a ser associada com `y`, ou seja, tanto `x` quando `y` estão
-  associados com a mesma célula de memória
-
-
-## Variáveis
-
-- Quando a instrução `x = 20` é executado o Python reserva uma nova célula de
-  memória para o valor 20 e associa esta célula com o nome `x`. Note que
-  a memória associada com `y` não é alterada
-
-- Quando a instrução `x = x + 3` é executada o Python lê o valor armazenado na
-  célula de memória associado com `x` (20), soma com 3, reserva uma nova célula
-  de memória para o valor 23 e associa esta célula ao nome `x`. A célula de
-  memória previamente associada com `x` fica a disposição para armazenar outro
-  valor
+- Quando a instrução `y = x`{.python} é executada a célula de memória associada
+  com `x` passa também a ser associada com `y`, ou seja, tanto `x` quando `y`
+  estão associados com a mesma célula de memória
 
 
 ## Variáveis
 
-- A expressão `x = x + 3` parece estranha
+- Quando a instrução `x = 20`{.python} é executado o Python reserva uma nova
+  célula de memória para o valor `20`{.python} e associa esta célula com o nome
+  `x`. Note que a memória associada com `y` não é alterada
 
-    - Como `x` pode ser **igual** a `x + 3`!? \pause
+- Quando a instrução `x = x + 3`{.python} é executada o Python lê o valor
+  armazenado na célula de memória associado com `x` (`20`{.python}), soma com
+  `3`{.python}, reserva uma nova célula de memória para o valor `23`{.python}
+  e associa esta célula ao nome `x`. A célula de memória previamente associada
+  com `x` fica a disposição para armazenar outro valor
+
+
+## Variáveis
+
+- A expressão `x = x + 3`{.python} parece estranha
+
+    - Como `x` pode ser **igual** a `x + 3`{.python}!? \pause
 
     - **Pare!** \pause
 
@@ -159,15 +188,15 @@ Considere o seguinte exemplo
 
 - O símbolo `=` é chamado de atribuição em Python
 
-    - A expressão `a = 10` (lê-se `a` recebe 10) significa
+    - A expressão `a = 10`{.python} (lê-se `a` recebe `10`{.python}) significa
 
-        - Associe com o nome `a` uma célula de memória com o valor 10
+        - Associe com o nome `a` uma célula de memória com o valor `10`{.python}
 
-    - A expressão `a = 2 * a + 1` (lê-se `a` recebe duas vezes `a` mais 1) significa
+    - A expressão `a = 2 * a + 1`{.python} (lê-se `a` recebe duas vezes `a` mais 1) significa
 
-        - Associe com o nome `a` uma célula de memória com o valor `2 * a + 1`
-          (isto é, o valor da célula de memória atualmente associado com `a`
-          multiplicado por 2 mais 1)
+        - Associe com o nome `a` uma célula de memória com o valor
+          `2 * a + 1`{.python} (isto é, o valor da célula de memória atualmente
+          associado com `a` multiplicado por `2`{.python} mais `1`{.python})
 
 
 ## Variáveis
@@ -183,7 +212,8 @@ Considere o seguinte exemplo
 - O valor do lado esquerdo de `=` deve ser um nome (que será associado com
   a célula de memória que contém o resultado da expressão do lado direito)
 
-    - A expressão `10 = x` não é válida porque `10` não é um nome
+    - A expressão `10 = x`{.python} não é válida porque `10`{.python} não é um
+      nome
 
 
 ## Variáveis
@@ -208,18 +238,40 @@ Instruções de repetição
 
 ## Instruções de repetição
 
-- Até agora vimos uma instrução de controle, a seleção (`if`)
+- Até agora vimos uma instrução de controle, a seleção (`if`{.python})
 
-- Agora veremos outra instrução de controle, o enquanto (`while`), uma
+- Agora veremos outra instrução de controle, o enquanto (`while`{.python}), uma
   instrução de repetição
-
-    - A instrução `while` repete um conjunto de instruções até que uma
-      determinada condição seja alcançada
 
 
 ## Instruções de repetição
 
-Qual o valor de `i` após o término do `while`?
+- A instrução `while`{.python} repete um conjunto de instruções até que uma
+  determinada condição seja alcançada
+
+- A forma preliminar do `while`{.python} é
+
+    \small
+
+    ```python
+    while condicao:
+        instrucoes
+    ```
+
+\normalsize
+\pause
+
+- Como o Python avalia uma instrução `while`{.python}? \pause
+
+    - Ele primeiro avalia a expressão `condicao`, se o resultado for
+      `True`{.python}, então ele executa o bloco `instrucoes` e volta para a
+      linha do `while condicao`{.python} para repetir o processo. A repetição
+      para quando o resultado de `condicao` for `False`{.python}.
+
+
+## Instruções de repetição
+
+Qual o valor de `i` após o término do `while`{.python}?
 
 \small
 
@@ -239,7 +291,7 @@ Qual o valor de `i` após o término do `while`?
 
 ## Instruções de repetição
 
-Quais os valores de `i` e `n` após o término do `while`?
+Quais os valores de `i` e `n` após o término do `while`{.python}?
 
 \small
 
@@ -261,7 +313,7 @@ Quais os valores de `i` e `n` após o término do `while`?
 
 ## Instruções de repetição
 
-Quais os valores de `i`, `a` e `b` após o término do `while`?
+Quais os valores de `i`, `a` e `b` após o término do `while`{.python}?
 
 \small
 
@@ -286,7 +338,7 @@ Quais os valores de `i`, `a` e `b` após o término do `while`?
 
 ## Instruções de repetição
 
-Quais os valores de `cont`, `n` e `i` após o término do `while`?
+Quais os valores de `cont`, `n` e `i` após o término do `while`{.python}?
 
 \small
 
@@ -387,9 +439,9 @@ $$ a \times b = \underbrace{a + a + \cdots + a}_{b\ \text{vezes}} = \sum_{n = 1}
 
 ## Exemplo
 
-Vamos calcular `multiplica(3, 4)` usando uma sequência de somas. Temos que `a
-= 3` e `b = 4`, `n` representa quantas vezes o valor de $a$ foi somado e `prod`
-é o valor parcial da soma
+Vamos calcular `multiplica(3, 4)`{.python} usando uma sequência de somas. Temos
+que `a = 3`{.python} e `b = 4`{.python}, `n` representa quantas vezes o valor
+de $a$ foi somado e `prod` é o valor parcial da soma
 
 |   `n`    | `prod` (valor parcial de $a \times b$) |
 |:--------:|:--------------------------------------:|
@@ -496,7 +548,7 @@ Um número inteiro positivo é primo se ele tem apenas dois divisores distintos,
 ## Atividades
 
 @. Dado um número inteiro positivo $n \ge 4$, defina uma função que devolva
-dois números $a$ e $b$, tal que $a$ e $b$ sejam primos é $n = a + b$.
+dois números $a$ e $b$, tal que $a$ e $b$ sejam primos e $n = a + b$.
 
 
 ## Leitura recomendada
