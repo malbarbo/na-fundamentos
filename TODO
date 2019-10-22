@@ -27,10 +27,15 @@ Biblioteca creation: line, crop, rotate, scale, translate, eventos de mouse.
    - Debug
    - Adicionar referências
 
+06 - Utilizar apenas exemplos que use recursão natural (n - 1)
+
 07 - Adicionar exemplo integral definida
    - Adicionar exemplo método de newton para cálculo de raiz quadrada?
    - Repetição aninhada
-   - Troca de valores da lista. Atribuição múltipla vs valor temporário.
+   - Diferença entre variáveis locais e globais?
+   - Comparar repetição com recursão?
+
+08 - Troca de valores da lista. Atribuição múltipla vs valor temporário.
 
 11 - Expandir
    - Falar de import
