@@ -1,7 +1,25 @@
+def resto(a, b):
+    '''
+    Inteiro Positivo, Inteiro Positivo -> Inteiro Positivo
+    Calcula o resto da divisão de a por b usando uma sequência de subtrações.
+    Exemplos
+    >>> resto(18, 5)
+    3
+    >>> resto(16, 3)
+    1
+    >>> resto(8, 2)
+    0
+    '''
+    resto = a
+    while resto >= b:
+        resto = resto - b
+    return resto
+
+
 def multiplica(a, b):
     '''
     Inteiro Positivo, Inteiro Positivo -> Inteiro Positivo
-    Calcula o produto entre a e b usando sequencia de adições.
+    Calcula o produto entre a e b usando uma sequência de adições.
     Exemplos
     >>> multiplica(3, 4)
     12
@@ -18,53 +36,65 @@ def multiplica(a, b):
     return prod
 
 
-def resto(a, b):
+def exp(a, b):
     '''
-    Inteiro Positivo, Inteiro Positivo -> Inteiro Positivo
-    Calcula o resto da divisão de a por b usando sequencia de subtrações.
+    Inteiro Positivo, Inteiro Positivo -> Inteiro
+    Calcula o valor a**b usando uma sequência de multiplicações
     Exemplos
-    >>> resto(10, 2)
+    >>> exp(3, 1)
+    3
+    >>> exp(3, 2)
+    9
+    >>> exp(3, 3)
+    27
+    '''
+    n = 0
+    expo = 1
+    while n != b:
+        expo = expo * a
+        n = n + 1
+    return expo
+
+
+def conta_multiplos_3_5(a, b):
+    '''
+    Inteiro Positivo, Inteiro Positivo -> Inteiro
+    Calcula a quantidade de valores no intervalo [a, b] que sao múltiplos
+    de 3 e 5.
+    Exemplos
+    >>> conta_multiplos_3_5(1, 14)
     0
-    >>> resto(10, 3)
-    1
-    >>> resto(10, 4)
+    >>> conta_multiplos_3_5(10, 31)
     2
     '''
-    resto = a
-    while resto >= b:
-        resto = resto - b
-    return resto
+    n = a
+    cont = 0
+    while n <= b:
+        if n % 3 == 0 and n % 5 == 0:
+            cont = cont + 1
+        n = n + 1
+    return cont
 
 
-def proximo_multiplo(m, n):
+def hiperfatorial(n):
     '''
-    Inteiro Positivo, Inteiro Positivo -> Inteiro Positivo
-    Encontra o menor número maior que m que seja múltiplo de n.
-    >>> proximo_multiplo(10, 8)
-    16
-    >>> proximo_multiplo(6, 2)
-    8
-    >>> proximo_multiplo(5, 5)
-    10
+    Inteiro Positivo -> Inteiro Positivo
+    Calcula o hiperfatorial de n, que é definido como
+    1**1 * 2**2 * 3 ** 3 ... n ** n
+    Exemplos
+    >>> hiperfatorial(1)
+    1
+    >>> hiperfatorial(2)
+    4
+    >>> hiperfatorial(3)
+    108
     '''
-    p = m + 1
-    while p % n != 0:
-        p = p + 1
-    return p
-
-
-def proximo_multiplo_2(m, n):
-    '''
-    Inteiro Positivo, Inteiro Positivo -> Inteiro Positivo
-    Encontra o menor número maior que m que seja múltiplo de n.
-    >>> proximo_multiplo_2(10, 8)
-    16
-    >>> proximo_multiplo_2(6, 2)
-    8
-    >>> proximo_multiplo_2(5, 5)
-    10
-    '''
-    return n * ((m // n) + 1)
+    hfat = 1
+    k = 0
+    while k != n:
+        k = k + 1
+        hfat = hfat * k ** k
+    return hfat
 
 
 def e(x):

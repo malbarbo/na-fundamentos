@@ -22,7 +22,7 @@ Calcule o valor de $e^2$ usando a série anterior.
 
 ## Introdução
 
-\scriptsize
+\small
 
 |   $n$    | dividendo ($x^n$) | divisor ($n!$) | termo ($\frac{x^n}{n!}$)        | soma ($e^x$) |
 |:--------:|:-----------------:|:--------------:|:-------------------------------:|:------------:|
@@ -399,13 +399,117 @@ Quais os valores de `x` e `y` após a execução de `fun`?
 
 ## Exemplo
 
+Dado dois inteiros positivos $a$ e $b$, defina uma função que calcule o resto
+da divisão de $a$ por $b$ usando uma sequência de subtrações.
+
+
+## Exemplos
+
+Seguindo a receita de projeto de funções obtemos
+
+\small
+
+```python
+def resto(a, b):
+    '''
+    Inteiro Positivo, Inteiro Positivo -> Inteiro Positivo
+    Calcula o resto da divisao de a por b usando uma
+    sequência de subtrações.
+    Exemplos
+    >>> resto(18, 5)
+    3
+    >>> resto(16, 3)
+    1
+    >>> resto(8, 2)
+    0
+    '''
+    return
+```
+
+
+## Exemplos
+
+- O próximo passo é escrever o corpo!
+
+- Os passos feitos até agora devem guiar a escrita do corpo da função
+
+- Apesar de termos colocado o resultado dos exemplos diretamente (fizemos
+  o cálculo "de cabeça"), neste momento é importante pensarmos em uma forma
+  sistemática para obter os resultados dos exemplos
+
+- A criação de uma tabela pode ajudar
+
+
+## Exemplos
+
+- Vamos considerar o exemplo `resto(18, 5)`{.python}. Como podemos obter
+  o resultado `3`{.python} usando uma sequência de subtrações? \pause
+
+- A ideia é ir subtraindo `5`{.python} de `18`{.python} enquanto isso for
+  possível
+    - `18 - 5`{.python} dá `13`{.python}
+    - `13 - 5`{.python} dá `8`{.python}
+    - `8 - 5`{.python} dá `3`{.python}
+    - Não dá para subtrair `5`{.python} de `3`{.python}, portanto o resto da
+      divisão de `18`{.python} por `5`{.python} é `3`{.python}
+
+
+## Exemplos
+
+Vamos escrever o resultado deste processo em uma tabela. Lembrando que estamos
+calculando `resto(18, 5)`{.python}, portanto, temos `a = 18`{.python} e `b
+= 5`{.python}. Precisamos apenas de uma coluna `resto`, que representa o valor
+atual que vamos "tentar" subtrair `5`{.python} \pause
+
+| `resto`  |
+|:--------:|
+|  18      |
+| \pause 13|
+| \pause 8 |
+| \pause 3 |
+
+
+## Exemplos
+
+- A partir da tabela podemos responder as seguintes questões
+    - Qual o valor inicial de `resto`?
+      \pause `resto = a`{.python}
+    - Como o valor de `resto` é atualizado a cada linha?
+      \pause `resto = resto - b`{.python}
+    - Qual a condição necessária para continuar o processo (as subtrações)?
+      \pause `resto >= b`{.python}
+    - Qual a expressão que define o resultado?
+      \pause `resto`
+
+
+## Exemplos
+
+A partir da observações anteriores podemos escrever o corpo da função
+
+\scriptsize
+
+```python
+def resto(a, b):
+    # valor inicial de resto
+    resto = a
+    # condição necessária para continuar o processo
+    while resto >= b:
+        # como resto é atualizado
+        resto = resto - b
+    # expressão que define o resultado
+    return resto
+```
+
+
+## Exemplo
+
 Defina uma função que calcule o produto de dois números inteiros usando uma
 sequência de somas.
 
 
 ## Exemplo
 
-Seguindo a receita de projeto de funções
+Seguindo a receita de projeto de funções obtemos
 
 \small
 
@@ -413,7 +517,7 @@ Seguindo a receita de projeto de funções
 def multiplica(a, b):
     '''
     Inteiro Positivo, Inteiro Positivo -> Inteiro Positivo
-    Calcula o produto entre a e b usando sequencia de somas.
+    Calcula o produto entre a e b usando uma sequência de somas.
     Exemplos
     >>> multiplica(3, 4)
     12
@@ -428,10 +532,9 @@ def multiplica(a, b):
 
 ## Exemplo
 
-- O próximo passo é escrever o corpo
+- O próximo passo é escrever o corpo!
 
-- Os passos anteriores do projeto das funções (principalmente os exemplos)
-  devem guiar a escrita do corpo da função
+- Os passos feitos até agora devem guiar a escrita do corpo da função
 
 - Como obter os resultados dos exemplos anteriores usando somas? \pause
 $$ a \times b = \underbrace{a + a + \cdots + a}_{b\ \text{vezes}} = \sum_{n = 1}^{b} a$$
@@ -454,19 +557,18 @@ de $a$ foi somado e `prod` é o valor parcial da soma
 
 ## Exemplo
 
-Observando a tabela anterior podemos fazer as seguintes observações
+A partir da tabela podemos responder as seguintes questões
 
-1. O valor inicial (primeira linha) de `n` é 0 e o de `prod` é 0
-
-2. O valor de `n` da última linha é 4 (valor de `b`)
-
-3. O valor de `prod` da última linha é 12 (valor de $a \times b$)
-
-4. O valor de `n` de qualquer linha (diferente da primeira) é 1 a mais do que
-   o valor de `n` da linha anterior
-
-5. O valor de `prod` de qualquer linha (diferente da primeira) é 3 (valor de
-   `a`) a mais do que o valor de `prod` da linha anterior
+- Qual o valor inicial de `n` e `prod`?
+  \pause `n = 0`{.python} e `prod = 0`{.python}
+- Como os valores de `n` e `prod` são atualizados (como os valores de uma linha
+  são calculados usando os valores da linha anterior)?
+  \pause `n = n + 1`{.python} (soma `1`{.python} no valor da linha anterior)
+  e `prod = prod + a`{.python} (soma `a`{.python} no valor da linha anterior)
+- Qual a condição necessária para continuar o processo?
+  \pause `n != b`{.python}
+- Qual a expressão que define o resultado?
+  \pause `prod`
 
 
 ## Exemplo
@@ -477,33 +579,38 @@ A partir da observações anteriores podemos escrever o corpo da função
 
 ```python
 def multiplica(a, b):
-    # valor inicial de n e prod (obs 1)
+    # valor inicial de n e prod
     n = 0
     prod = 0
-    # prod é calculado de forma iterativa
-    # isto é, através de uma repetição
-    # a repetição acontece enquanto n != b (obs 2)
+    # condição necessária para repetir o processo
     while n != b:
-        # como o valor de n muda (obs 4)
+        # como o valor de n é atualizado
         n = n + 1
-        # como o valor de prod muda (obs 5)
+        # como o valor de prod é atualizado
         prod = prod + a
-    # o resultado da função (obs 3)
+    # a expressão que define o resultado
     return prod
 ```
 
 
 ## Exemplo
 
-Dado dois inteiros positivos $a$ e $b$, defina uma função que calcule o resto
-da divisão de $a$ por $b$ usando uma sequência de subtrações.
+Dado dois número inteiros positivos $a$ e $b$, defina uma função que calcule
+o valor $a^b$ usando uma sequência de multiplicações.
 
 
 ## Exemplo
 
-Dado dois inteiros positivos $m$ e $n$, defina uma função que encontre o menor
-número maior que $m$ que seja divisível por $n$. Escreva duas versões da
-função, uma que usa repetição e outra não.
+Dado dois número inteiros positivos $a$ e $b$, onde $a < b$, defina uma função
+que conte a quantidade de números no intervalo $[a, b]$ que sejam múltiplos de
+3 e 5 ao mesmo tempo.
+
+
+## Exemplo
+
+O hiperfatorial de um número natural $n$ é definido como $$H(n) = \prod_{k
+= 1}^{n} k^k = 1^1 \times 2^2 \times 3^3 \times \cdots \times (n - 1)^{n - 1}
+\times n^n$$ Defina uma função que calcule o hiperfatorial de um dado número.
 
 
 ## Exemplo
@@ -519,12 +626,14 @@ Atividades
 
 ## Atividades
 
-@. Dado dois número inteiros positivos $a$ e $b$, defina uma função que calcule
-o valor $a^b$ usando uma sequência de multiplicações.
+@. Dado dois inteiros positivos $a$ e $b$, defina uma função que calcule
+   a divisão inteira de $a$ por $b$ usando uma sequência de subtrações.
 
-@. Dado dois número inteiros positivos $a$ e $b$, onde $a < b$, defina uma
-função que conte a quantidade de números no intervalo $[a, b]$ que sejam
-múltiplos de 7 e 13.
+@. O superfatorial de um número natural $n$ é definido como o produto dos
+   primeiros $n$ fatoriais, isto é
+   $$sf(n) = \prod_{k = 1}^{n} k! = 1! \times 2! \times 3! \times \cdots \times (k - 1)! \times k!$$
+   Defina uma função que calcule o superfatorial de um dado número
+
 
 ## Atividades
 
@@ -533,6 +642,18 @@ $$\sin x = \sum^{\infty}_{n=0} \frac{(-1)^n}{(2n+1)!} x^{2n+1} = x - \frac{x^3}{
 
 @. Defina uma função que calcule o valor $\cos x$, para um dado $x$ em radianos, usando a série
 $$\cos x = \sum^{\infty}_{n=0} \frac{(-1)^n}{(2n)!} x^{2n} = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \cdots$$
+
+
+## Atividades
+
+Este exercício já fez parte de uma prova!
+
+@. Defina uma função que receba como parâmetro um valor $n$ e calcule o valor
+   aproximado de $\pi$ usando os primeiros $n$ termos da série
+
+   $$\pi = 4 \sum_{k=0}^{\infty} \frac{(-1)^k}{2 k + 1}
+       = 4 \left ( \frac{1}{1} - \frac{1}{3} + \frac{1}{5} - \frac{1}{7} + \frac{1}{9} - \cdots  \right)$$
+
 
 ## Atividades
 
