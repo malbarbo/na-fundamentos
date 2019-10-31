@@ -123,11 +123,14 @@ subtração.
 
 ## Exemplo 3
 
+\scriptsize
+
 ```python
 def par(n):
     '''
     Natural -> Booleano
-    Devolve True se n é par, isto é, divisível por 2, False caso contrário.
+    Devolve True se n é par, isto é, divisível por 2,
+    False caso contrário.
     Exemplos
     >>> par(8)
     True
