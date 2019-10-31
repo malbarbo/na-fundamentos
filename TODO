@@ -5,8 +5,6 @@ Fazer make gerar todos os artefatos se target não estiver presente.
 Falar em cada capitulo que alguns funções (como seno) estão disponiveis na
 biblioteca padrão.
 
-Recursividade?
-
 Atribuir autoria as imagens.
 
 Biblioteca creation: line, crop, rotate, scale, translate, eventos de mouse.
@@ -28,12 +26,15 @@ Biblioteca creation: line, crop, rotate, scale, translate, eventos de mouse.
    - Adicionar referências
 
 06 - Utilizar apenas exemplos que use recursão natural (n - 1)
+   - Avaliar a hora de falar de recursividade...
 
 07 - Adicionar exemplo integral definida
    - Adicionar exemplo método de newton para cálculo de raiz quadrada?
    - Repetição aninhada
    - Diferença entre variáveis locais e globais?
    - Comparar repetição com recursão?
+   - Só usar repetição em função, não no modo interativo
+   - Exercício, identificar o que a função faz e renomeá-la de acordo (as variáveis também)
 
 08 - Troca de valores da lista. Atribuição múltipla vs valor temporário.
 
