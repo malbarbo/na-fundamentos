@@ -638,10 +638,10 @@ Atividades
 ## Atividades
 
 @. Defina uma função que calcule o valor $\sin x$, para um dado $x$ em radianos, usando a série
-$$\sin x = \sum^{\infty}_{n=0} \frac{(-1)^n}{(2n+1)!} x^{2n+1} = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \cdots$$
+$$\sin x = \sum^{\infty}_{n=0} \frac{(-1)^n}{(2n+1)!} x^{2n+1} = \frac{x^1}{1!} - \frac{x^3}{3!} + \frac{x^5}{5!} - \cdots$$
 
 @. Defina uma função que calcule o valor $\cos x$, para um dado $x$ em radianos, usando a série
-$$\cos x = \sum^{\infty}_{n=0} \frac{(-1)^n}{(2n)!} x^{2n} = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \cdots$$
+$$\cos x = \sum^{\infty}_{n=0} \frac{(-1)^n}{(2n)!} x^{2n} = \frac{x^0}{0!} - \frac{x^2}{2!} + \frac{x^4}{4!} - \cdots$$
 
 
 ## Atividades
