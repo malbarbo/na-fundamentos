@@ -1,16 +1,21 @@
-Adicionar links para vídeos aulas
+Geral
+    - Adicionar links para vídeos aulas
 
-Fazer make gerar todos os artefatos se target não estiver presente.
+    - Falar em cada capitulo que alguns funções (como seno) estão disponiveis
+      na biblioteca padrão
 
-Falar em cada capitulo que alguns funções (como seno) estão disponiveis na
-biblioteca padrão.
+    - Atribuir autoria as imagens
 
-Atribuir autoria as imagens.
+    - Colocar os enúncios no arquivos python de exemplos e exercícios
 
-Biblioteca creation: line, crop, rotate, scale, translate, eventos de mouse.
+    - Não colorir as respostas do exemplos no modo interativo
 
-Colocar os enúncios no arquivos python de exemplos e exercícios
 
+Biblioteca creation
+    - line, crop, rotate, scale, translate, eventos de mouse.
+
+Build
+    - Fazer make gerar todos os artefatos se target não estiver presente
 
 00 - Motivação. Porque computação é importante para o curso?
 
