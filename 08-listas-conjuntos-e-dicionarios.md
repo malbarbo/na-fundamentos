@@ -174,15 +174,17 @@ neste caso utilizamos a função `append` ao invés de concatenação de listas
 
 ## Listas
 
-- A forma de executar a função `append` é diferente das outras funções
+A forma de executar a função `append` é diferente das outras funções
 
-    - Quando `xs` é uma lista, a chamada `xs.append(valor)` é equivalente
-      a `list.append(xs, valor)`
+- Quando `xs` é uma lista, a chamada `xs.append(valor)` é equivalente
+  a `list.append(xs, valor)`
 
 - As funções que são executadas desta forma são chamadas de **métodos**
 
-- Observe que a função `append` não produz nenhum valor, mas ela altera o valor
-  de `xs` (vamos discutir com mais detalhes esta questão em um próximo módulo)
+\pause
+
+Observe que a função `append` não produz nenhum valor, mas ela altera o valor
+de `xs` (vamos discutir com mais detalhes esta questão em um próximo módulo)
 
 
 ## Listas
@@ -471,11 +473,11 @@ lista com os elementos positivos de `xs`.
 
 ## Listas
 
-- Algumas das funções que definimos nos exemplos também estão definidas na
-  biblioteca do Python
+Algumas das funções que definimos nos exemplos também estão definidas na
+biblioteca do Python.
 
-- Definir estas funções é interessante para entender repetição e listas, mas na
-  prática usamos as funções já existentes
+Definir estas funções é interessante para entender repetição e listas, mas na
+prática usamos as funções já existentes.
 
 
 ## Listas
@@ -529,9 +531,8 @@ Conjuntos
 
 <!-- https://www.programiz.com/python-programming/set -->
 
-- Um conjunto é coleção não ordenada de elementos
-
-- Cada elemento de uma coleção é único e deve ser imutável
+Um conjunto é coleção não ordenada de elementos. Cada elemento de uma coleção
+é único e deve ser imutável.
 
 
 ## Conjuntos
@@ -595,7 +596,7 @@ Um conjunto também pode ser criado a partir de uma lista
 
 ## Conjuntos
 
-Algumas funções e operações sobre conjuntos são definidas pelo Python
+Algumas funções e operações sobre conjuntos são definidas pelo Python.
 
 
 ## Conjuntos
@@ -638,7 +639,7 @@ Diferença simétrica (está em apenas um dos dois conjuntos)
 
 ## Conjuntos
 
-Assim como uma lista, um conjunto é um objeto mutável
+Assim como uma lista, um conjunto é um objeto mutável.
 
 
 ## Conjuntos
@@ -758,7 +759,7 @@ Dicionários
 
 ## Dicionários
 
-- Um dicionário é uma generalização de uma lista
+Um dicionário é uma generalização de uma lista
 
 - Em uma lista os índices são números começando com 0
 
@@ -767,8 +768,8 @@ Dicionários
 
 ## Dicionários
 
-- Um dicionário contém uma coleção de índices, chamados chaves, e uma coleção
-  de valores
+Um dicionário contém uma coleção de índices, chamados chaves, e uma coleção de
+valores
 
 - Cada chave é associada a um único valor
 
@@ -854,9 +855,8 @@ False
 
 ## Dicionários
 
-- Para processar um dicionário temos que usar repetição
-
-- A repetição usando `for`{.python} pode ser usada de duas maneiras
+Para processar os elementos de um dicionário, podemos usar o `for`{.python} de
+duas maneiras.
 
 
 ## Dicionários
@@ -973,10 +973,10 @@ Atividades
 
 ## Leitura recomendada
 
-- \href{https://penseallen.github.io/PensePython2e/}{Livro Pense em Python} 2ª edição. Allen B. Downey
+\href{https://penseallen.github.io/PensePython2e/}{Livro Pense em Python} 2ª edição. Allen B. Downey
 
-    - \href{https://penseallen.github.io/PensePython2e/10-listas.html}{Capítulo
-      10 - Listas}
+- \href{https://penseallen.github.io/PensePython2e/10-listas.html}{Capítulo 10
+  - Listas}
 
-    - \href{https://penseallen.github.io/PensePython2e/11-dicionarios.html}{Capítulo
-      11 - Dicionários}
+- \href{https://penseallen.github.io/PensePython2e/11-dicionarios.html}{Capítulo
+  11 - Dicionários}
