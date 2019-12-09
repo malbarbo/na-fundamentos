@@ -1,6 +1,9 @@
 from doctest import testmod
 
 
+# Defina uma função que some todos os elementos das posições pares de uma
+# lista.
+
 def soma_posicoes_pares(xs):
     '''
     Lista de números -> Número
@@ -21,6 +24,8 @@ def soma_posicoes_pares(xs):
     return soma
 
 
+# Defina uma função calcule o produto do elementos de uma lista.
+
 def produto(xs):
     '''
     Lista de números -> Número
@@ -37,6 +42,10 @@ def produto(xs):
         prod = prod * x
     return prod
 
+
+
+# Defina uma função que verifique se todos os elementos de uma lista não vazia
+# são iguais.
 
 def todos_iguais(xs):
     '''
@@ -59,6 +68,9 @@ def todos_iguais(xs):
     return iguais
 
 
+# Defina uma função que receba como parâmetros dois números naturais n e k, e
+# produza uma lista com os k primeiros múltiplos de n.
+
 def multiplos(n, k):
     '''
     Cria um lista com os primeiros k múltiplos de n.
@@ -78,6 +90,10 @@ def multiplos(n, k):
         i = i + 1
     return mul
 
+
+# Defina uma função que receba como parâmetro um lista e um valor n e verifique
+# se a soma dos n primeiros elementos da lista é igual a soma dos últimos n
+# elementos da lista.
 
 def soma_inicio_fim_igual(xs, n):
     '''
@@ -106,6 +122,8 @@ def soma_inicio_fim_igual(xs, n):
     return s == 0
 
 
+# Defina uma função que calcule a média dos valores de uma lista não vazia.
+
 def media(xs):
     '''
     Lista de números -> Número
@@ -121,6 +139,8 @@ def media(xs):
         soma = soma + x
     return soma / len(xs)
 
+
+# Defina uma função que encontre o valor máximo de uma lista não vazia.
 
 def maximo(xs):
     '''
@@ -140,6 +160,8 @@ def maximo(xs):
             max = x
     return max
 
+
+# Defina uma função que verifique se um dado elemento está em uma lista.
 
 def contem(valor, xs):
     '''
@@ -191,6 +213,9 @@ def contem2(valor, xs):
     return presente
 
 
+# Defina uma função que devolva a posição do valor máximo de uma lista não
+# vazia.
+
 def indice_maximo(xs):
     '''
     Lista de números -> Número
@@ -211,6 +236,9 @@ def indice_maximo(xs):
         i = i + 1
     return i
 
+
+# Defina uma função que devolva as posições do valor máximo de uma lista não
+# vazia.
 
 def indices_maximo(xs):
     '''
@@ -235,6 +263,10 @@ def indices_maximo(xs):
     return indices
 
 
+# Defina uma função que receba como parâmetro dois números inteiros não
+# negativos a e b, onde a <= b, e devolva uma lista com todos os números (em
+# ordem crescente) no intervalo [a, b].
+
 def lista_intervalo(a, b):
     '''
     Inteiro positivo, Inteiro Positivo -> Lista de números inteiros
@@ -254,6 +286,9 @@ def lista_intervalo(a, b):
         n = n + 1
     return xs
 
+
+# Defina uma função que receba como parâmetro uma lista xs e crie uma nova
+# lista com os elementos positivos de xs.
 
 def positivos(xs):
     '''
@@ -275,6 +310,8 @@ def positivos(xs):
     return pos
 
 
+# Defina uma função que calcule a união de dois conjuntos (sem usar o operador |).
+
 def uniao_conjunto(a, b):
     '''
     Conjunto de valores, Conjunto de valores -> Conjunto de valores
@@ -290,6 +327,10 @@ def uniao_conjunto(a, b):
         c.add(x)
     return c
 
+
+# Defina uma função que receba como entrada uma lista de valores e devolva um
+# dicionário que associe cada valor da lista com a posição de sua primeira
+# ocorrência na lista.
 
 def primeira_posicao(xs):
     '''
