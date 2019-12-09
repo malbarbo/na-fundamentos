@@ -8,55 +8,56 @@ Introdução
 
 ## Introdução
 
-- Quase todas as funções que vimos até agora devolvem resultados
+Quase todas as funções que vimos até agora devolvem resultados. Por exemplo,
+a função `sum` que soma os valores de uma lista
 
-- Por exemplo, a função `sum` que soma os valores de uma lista
-
-    ```python
-    >>> sum([4, 3, 7])
-    14
-    ```
-
-
-## Introdução
-
-- No entanto, algumas funções, como `append`, não devolvem resultados
-
-    ```python
-    >>> xs = [1, 3, 7]
-    >>> xs.append(4)
-    >>>
-    ```
-
-- O fato de `append` não produzir resultado não tem relação com a forma que a
-  chamada da função é especificada (lembre-se, a chamada `xs.append(4)` é
-  equivalente a `list.append(xs, 4)`), mas com a maneira que `append` é
-  implementada
+```python
+>>> sum([4, 3, 7])
+14
+```
 
 
 ## Introdução
 
-- Porque executar uma função que não devolve resultado?
+No entanto, algumas funções, como `append`, não devolvem resultados
+
+```python
+>>> xs = [1, 3, 7]
+>>> xs.append(4)
+>>>
+```
 
 \pause
 
-- Pelo efeito colateral que ela gera
-
-    - A chamada `xs.append(4)` não devolve nenhum valor, mas tem o efeito
-      colateral de adicionar o valor 4 no final de `xs`
+Note que o fato de `append` não produzir resultado não tem relação com a forma
+que a chamada da função é especificada (lembre-se, a chamada `xs.append(4)`
+é equivalente a `list.append(xs, 4)`), mas com a maneira que `append`
+é implementada
 
 
 ## Introdução
 
-- Uma função tem **efeito colateral** se ela altera algum estado do programa ou
-  produz algum efeito observável (como imprimir na tela)
+Porque executar uma função que não devolve resultado?
 
-- Duas questões são importantes neste contexto
+\pause
 
-    - Como escrever funções com efeitos colaterais?
+Pelo efeito colateral que ela gera
 
-    - Como escolher quando escrever funções com resultados e/ou com efeitos
-      colaterais?
+- A chamada `xs.append(4)` não devolve nenhum valor, mas tem o efeito colateral
+  de acrescentar o valor 4 no final de `xs`
+
+
+## Introdução
+
+Uma função tem **efeito colateral** se ela altera algum estado do programa ou
+produz algum efeito observável (como exibir na tela). \pause
+
+Duas questões são importantes neste contexto
+
+- Como escrever funções com efeitos colaterais?
+
+- Como escolher quando escrever funções com resultados e/ou com efeitos
+  colaterais?
 
 
 
@@ -65,52 +66,52 @@ Funções com efeitos colaterais
 
 ## Funções com efeitos colaterais
 
-- Como escrever funções com efeitos colaterais?
+Como gerar efeitos colaterais em funções?
 
-    - Modificando um parâmetro (mutável) passado para a função
+- Modificando um parâmetro (mutável) passado para a função
 
-    - Modificando uma variável não local
+- Modificando uma variável não local
 
-    - Chamando outras funções com efeitos colaterais
-
-
-## Funções com efeitos colaterais
-
-- Nós vimos anteriormente que quando um objeto mutável é referenciado por duas
-  variáveis ele pode ser alterado através de qualquer uma das duas variáveis
-
-    \scriptsize
-
-    ```python
-    >>> xs = [1, 2]
-    >>> ys = xs
-    # xs e ys referenciam a mesma lista (que é um objeto mutável)
-    # A lista pode ser alterada através de xs
-    >>> xs.append(3)
-    >>> xs
-    [1, 2, 3]
-    >> ys
-    [1, 2, 3]
-    # Ou através de ys
-    >>> ys[1] = 5
-    >>> ys
-    [1, 5, 3]
-    >>> xs
-    [1, 5, 3]
-    ```
-
+- Chamando outras funções com efeitos colaterais
 
 
 ## Funções com efeitos colaterais
 
-- O mesmo ocorre quando uma variável que referencia um valor mutável é
-  passada como argumento para uma função
+Nós vimos anteriormente que quando um objeto mutável é referenciado por duas
+variáveis ele pode ser alterado através de qualquer uma das duas variáveis
 
-    - Tanto a variável fora da função quando a variável (parâmetro) dentro da
-      função referenciam o mesmo objeto
+\scriptsize
 
-    - A alteração do valor através do parâmetro altera o mesmo objeto
-      referenciado pela variável fora da função
+```python
+>>> xs = [1, 2]
+>>> ys = xs
+# xs e ys referenciam a mesma lista (que é um objeto mutável)
+# A lista pode ser alterada através de xs
+>>> xs.append(3)
+>>> xs
+[1, 2, 3]
+>> ys
+[1, 2, 3]
+# Ou através de ys
+>>> ys[1] = 5
+>>> ys
+[1, 5, 3]
+>>> xs
+[1, 5, 3]
+```
+
+
+## Funções com efeitos colaterais
+
+O mesmo ocorre quando uma variável que referencia um valor mutável é passada
+como argumento para uma função
+
+- Tanto a variável fora da função quando a variável dentro da função
+  (parâmetro) referenciam o mesmo objeto
+
+- A alteração do valor através do parâmetro altera o mesmo objeto referenciado
+  pela variável fora da função
+
 
 ## Exemplo
 
@@ -208,43 +209,43 @@ def soma_1_mod(xs):
 
 ## Funções com efeitos colaterais
 
-- Para algumas funções em Python que produzem valor existe também uma versão
-  que não produz valor, mas tem efeito colateral
+Para algumas funções em Python que produzem resultado existe também uma versão
+que não produz resultado, mas tem efeito colateral.
 
 
 ## Funções com efeitos colaterais
 
-- Enquanto a função `sorted` devolve uma nova lista ordenada, a função
-  `list.sort` ordena a própria lista passada como parâmetro
+Enquanto a função `sorted` devolve uma nova lista ordenada, a função
+`list.sort` ordena a própria lista passada como parâmetro
 
-    ```python
-    >>> xs = [7, 3, 5]
-    >>> sorted(xs)
-    [3, 5, 7]
-    >>> xs
-    [7, 3, 5]
-    >>> xs.sort()
-    >>> xs
-    [3, 5, 7]
-    ```
+```python
+>>> xs = [7, 3, 5]
+>>> sorted(xs)
+[3, 5, 7]
+>>> xs
+[7, 3, 5]
+>>> xs.sort()
+>>> xs
+[3, 5, 7]
+```
 
 
 ## Funções com efeitos colaterais
 
-- Enquanto a função `reversed` devolve uma nova lista com os elementos em ordem
-  invertida, a função `list.reverse` inverte a ordem dos elementos na própria
-  lista passada como parâmetro
+Enquanto a função `reversed` devolve uma nova lista com os elementos em ordem
+invertida, a função `list.reverse` inverte a ordem dos elementos na própria
+lista passada como parâmetro
 
-    ```python
-    >>> xs = [7, 3, 5]
-    >>> reversed(xs)
-    [5, 3, 7]
-    >>> xs
-    [7, 3, 5]
-    >>> xs.reverse()
-    >>> xs
-    [5, 3, 7]
-    ```
+```python
+>>> xs = [7, 3, 5]
+>>> reversed(xs)
+[5, 3, 7]
+>>> xs
+[7, 3, 5]
+>>> xs.reverse()
+>>> xs
+[5, 3, 7]
+```
 
 
 
@@ -253,18 +254,16 @@ Funções com efeitos colaterais vs funções com resultados
 
 ## Funções com efeitos colaterais vs funções com resultados
 
-- Como escolher quando escrever funções com resultados e/ou com efeitos
-  colaterais? \pause
+Quando escrever funções com resultados e/ou com efeitos colaterais? \pause
 
-    - Como as funções sem efeitos colaterais são mais simples de escrever,
-      entender e testar, deve-se dar preferência a funções sem efeitos
-      colaterais
+- Como as funções sem efeitos colaterais são mais simples de escrever, entender
+  e testar, deve-se dar preferência a funções sem efeitos colaterais
 
-    - As funções com efeitos colaterais são usadas para economizar memória e/ou
-      tempo de execução
+- As funções com efeitos colaterais são usadas para economizar memória e/ou
+  tempo de execução
 
-        - As funções `reverse` e `sort` não precisam armazenar duas cópias da
-          lista que está sendo processada
+    - As funções `reverse` e `sort` não precisam armazenar duas cópias da lista
+      que está sendo processada
 
 
 
