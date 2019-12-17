@@ -964,6 +964,50 @@ Atividades
 
 ## Atividades
 
+@. Defina uma função que receba como entrada uma lista e devolva a posição do
+   valor mínimo da lista.
+
+@. Defina uma função que receba como entrada uma lista e uma posição e devolva
+   uma nova lista sem o elemento na posição especificada (Note que a função
+   pré-definida `del`{.python} não é apropriada para esta situação pois ela
+   modifica a própria lista, este exercício pede para que uma nova lista seja
+   criada)
+
+
+## Atividades
+
+@. Ordenação por seleção é uma algoritmo para ordenar uma lista de valores.
+   A ideia do algoritmo é encontrar o menor valor na lista de entrada, remover
+   este valor da lista e em seguida inserir este valor na lista de saída.
+   Baseado nesta descrição, defina uma função que receba como entrada uma lista
+   e devolva uma nova lista com os valores de entrada ordenados. Utilize as
+   funções dos dois exercícios anteriores para fazer a implementação!
+
+
+## Atividades
+
+@. Defina uma função que receba como entrada uma lista (com os valores em ordem
+   não decrescente) e um valor `n` e devolva uma nova lista com todos os
+   valores da lista de entrada e com o valor de `n` em ordem não decrescente.
+   Exemplo
+
+    ```python
+    >>> insere_ordenado([3, 3, 6, 10], 4)
+    [3, 3, 4, 6, 10]
+    ```
+
+
+## Atividades
+
+@. Ordenação por inserção é outro algoritmo para ordenar uma lista de valores.
+   A ideia do algoritmo e analisar cada elemento da lista de entrada (na ordem
+   que eles aparecem na lista) e colocá-lo em ordem na lista de saída. Usando
+   a função `insere_ordenado` defina uma função que receba como entrada uma
+   lista e devolva uma nova lista com os valores de entrada ordenados.
+
+
+## Atividades
+
 @. Defina uma função que calcule a diferença simétrica entre dois conjuntos
    (sem usar o operador `^`{.python}).
 
