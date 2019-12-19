@@ -1,7 +1,12 @@
+# Dado uma lista de números, defina uma função que some 1 a cada elemento da
+# lista.
+#   1. Defina uma função que devolva uma nova lista.
+#   2. Defina uma função que altere a lista passada como parâmetro.
+
 def soma_1(xs):
     '''
     Lista de números -> Lista de números
-    Cria uma lista de número somando 1 a cada elemento de xs.
+    Cria uma lista de númerois somando 1 a cada elemento de xs.
     >>> soma_1([1, 3, 4])
     [2, 4, 5]
     >>> soma_1([5])
