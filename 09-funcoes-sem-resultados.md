@@ -29,10 +29,10 @@ No entanto, algumas funções, como `append`, não devolvem resultados
 
 \pause
 
-Note que o fato de `append` não produzir resultado não tem relação com a forma
-que a chamada da função é especificada (lembre-se, a chamada `xs.append(4)`
-é equivalente a `list.append(xs, 4)`), mas com a maneira que `append`
-é implementada
+Note que o fato de `append`{.python} não produzir resultado não tem relação com
+a forma que a chamada da função é especificada (lembre-se, a chamada
+`xs.append(4)`{.python} é equivalente a `list.append(xs, 4)`{.python}), mas com
+a maneira que `append`{.python} é implementada
 
 
 ## Introdução
@@ -43,8 +43,8 @@ Porque executar uma função que não devolve resultado?
 
 Pelo efeito colateral que ela gera
 
-- A chamada `xs.append(4)` não devolve nenhum valor, mas tem o efeito colateral
-  de acrescentar o valor 4 no final de `xs`
+- A chamada `xs.append(4)`{.python} não devolve nenhum valor, mas tem o efeito
+  colateral de acrescentar o valor `4`{.python} no final de `xs`{.python}
 
 
 ## Introdução
@@ -141,8 +141,9 @@ def soma1_no_primeiro(lst):
 
 \pause
 
-Observe que não usamos `return` na função `soma1_no_primeiro`. A função não
-devolve um valor, mas tem o efeito colateral de alterar o parâmetro `lst`
+Observe que não usamos `return`{.python} na função `soma1_no_primeiro`.
+A função não devolve um valor, mas tem o efeito colateral de alterar
+o parâmetro `lst`
 
 
 ## Exemplo
