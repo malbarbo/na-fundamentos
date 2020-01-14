@@ -1,6 +1,6 @@
 ---
 # vim: set spell spelllang=pt_br sw=4:
-title: Entrada e saída
+title: Programas e entrada e saída
 ---
 
 Introdução
