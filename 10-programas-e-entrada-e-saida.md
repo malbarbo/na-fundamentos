@@ -43,7 +43,8 @@ de entrada e saída associadas com dispositivos padrão
 
 ## Entrada e saída padrão
 
-Exemplo `input`
+A função `input` exibe uma mensagem na tela e lê um valor digitado pelo
+usuário. Este valor é devolvido como uma string pela função.
 
 ```python
 >>> nome = input('Qual o seu nome? ')
@@ -56,15 +57,11 @@ Qual a sua idade? 21
 >>> 21
 ```
 
-\pause
-
-A função `input` exibe uma mensagem na tela e lê um valor digitado pelo
-usuário. Este valor é devolvido como uma string pela função.
-
 
 ## Entrada e saída padrão
 
-Exemplo `print`
+A função `print` exibe uma mensagem na tela. Ela não devolve nenhum valor,
+o texto é escrito diretamente na tela e não como resultado da função.
 
 ```python
 >>> print('Olá pessoal')
@@ -76,23 +73,20 @@ Seu troco é 12 reais
 >>>
 ```
 
-A função `print` exibe uma mensagem na tela. Ela não devolve nenhum valor,
-o texto é escrito diretamente na tela e não como resultado da função.
-
 
 ## Entrada e saída padrão
 
 A função `print` recebe uma quantidade variável de parâmetros
 
-- Um espaço em branco é automaticamente exibido após cada parâmetro (menos
+- Um espaço em branco é automaticamente adicionado após cada parâmetro (menos
   o último)
 
-- Um caractere especial de quebra de linha é impresso após o último argumento
+- Um caractere especial de quebra de linha (`'\n'`{.python}) é adicionado após
+  o último argumento, isto faz com que a próxima chamada de `print`{.python}
+  exiba o texto na próxima linha
 
 
 ## Entrada e saída padrão
-
-Exemplo
 
 ```python
 def soma(a, b):
@@ -102,13 +96,16 @@ def soma(a, b):
 >>> soma(2, 3)
 O resultado de 2 + 3 é
 5
->>>
+>>> soma(4, 7)
+O resultado de 4 + 7 é
+11
 ```
 
 
 ## Entrada e saída padrão
 
-A função `print` em geral é utiliza em conjunto com a função `string.format`
+A função `print`{.python} em geral é utiliza em conjunto com a função
+`str.format`{.python}
 
 ```python
 def soma(a, b):
@@ -121,13 +118,14 @@ O resultado de 2 + 3 é
 >>>
 ```
 
-`string.format` faz a formatação da string e `print` exibe a string
+`str.format`{.python} faz a formatação da string e `print`{.print} exibe
+a string
 
 
 ## Entrada e saída padrão
 
-A função `string.format` devolve a string de formatação substituindo cada item
-`{}` por um argumento
+A função `str.format`{.python} devolve a string de formatação substituindo cada
+item `{}` por um argumento
 
 \small
 
@@ -222,7 +220,7 @@ $ python3 media.py
 
 \pause
 
-- Ele não executará nenhum função...
+Ele não executará nenhum função...
 
 
 ## Execução de programas no terminal
@@ -232,6 +230,27 @@ Fazemos isto escrevendo o seguinte trecho de código no final do arquivo
 `media.py`
 
 ```python
+if __name__ == "__main__":
+    main()
+```
+
+
+## Arquivo `media.py` completo
+
+\small
+
+```python
+def main():
+    print('Este programa calcula a média de 3 notas')
+    a = float(input('Nota 1: '))
+    b = float(input('Nota 2: '))
+    c = float(input('Nota 3: '))
+    m = media(a, b, c)
+    print('A média é {0:.2f}'.format(m))
+
+def media(a, b, c):
+    return (a + b + c) / 3
+
 if __name__ == "__main__":
     main()
 ```
@@ -255,7 +274,7 @@ A média é 7.33
 
 Também podemos executar os testes do nosso programa no terminal
 
-\tiny
+\scriptsize
 
 ```
 $ python3 -mdoctest -v media.py
@@ -285,24 +304,34 @@ Arquivos
 
 ## Arquivos
 
-Muitos programas leem os dados de entrada de arquivos e/ou escrevem os dados de
-saída em arquivos. Veremos como ler e escrever arquivos texto no Python.
+O tipo de programa que escrevemos anteriormente, que pergunta para o usuário os
+dados de entrada, não é adequado para a leitura de muitos dados. Neste caso,
+é comum que os dados de entrada sejam armazenados em um arquivo e o programa
+leia os dados diretamente do arquivo.
+
+Além de ler dados de arquivos, os programas também podem escrever a saída em
+arquivos.
+
+Veremos como ler e escrever arquivos texto no Python.
 
 
 ## Arquivos
 
 Antes de ser lido, um arquivo precisa ser aberto (o arquivo é fechado
-automaticamente pela instrução `with`{.python})
+automaticamente pela instrução `with`{.python}). Após aberto, um arquivo texto
+pode ser lido linha por linha usando um `for`{.python}.
 
-Após aberto, um arquivo texto pode ser lido linha por linha usando um
-`for`{.python}
+\small
 
 ```python
 def le_arquivo(arquivo):
+    '''
+    String (nome de arquivo) -> Lista de strings
+    '''
     linhas = []
+    # f representa o arquivo aberto
     with open(arquivo) as f:
-        # linha conterá o símbolo de quebra de linha
-        # se presente na entrada
+        # linha conterá o símbolo \n no final se presente na entrada
         for linha in f:
             linhas.append(linha)
     return linhas
@@ -333,26 +362,76 @@ A função `le_arquivo('exemplo.txt')` produz
 >>> le_arquivo('exemplo.txt')
 ['Este é um arquivo de exemplo\n',
  'Tem números como\n',
- '23 50\n', '100\n',
+ '23 50\n',
+ '100\n',
  'e outras coisas.\n']
 ```
 
 
 ## Arquivos
 
-Para escrever em um arquivo, ele precisa ser aberto em modo escrita (argumento
-`'w'`).
+Se quisermos ler números de um arquivo, temos que primeiro ler o texto do
+arquivo (como na função `le_arquivo`) e depois processar o texto para extrair
+os números.
+
+Duas funções são úteis neste contexto: `str.strip` e `str.split`.
+
+
+## Arquivos
+
+A função `str.strip` remove os espaços em branco (incluindo tabs e quebras de
+linha) no início e no fim de uma string
+
+```python
+>>> ' um exemplo   '.strip()
+'um exemplo'
+```
+
+\pause
+
+A função `str.split` divide uma string em "palavras"
+
+```python
+>>> 'um exemplo  com o    10'.split()
+['um', 'exemplo', 'com', 'o', '10']
+```
+
+
+## Arquivos
+
+Exemplo de como extrair dois número de uma linha
+
+```python
+>>> linha = '10 34.0\n'
+>>> nums = linha.strip()
+>>> float(nums[0])
+10.0
+>>> float(nums[1])
+34.0
+```
+
+
+## Arquivos
+
+Para escrever em um arquivo, ele precisa ser aberto em modo escrita (com
+o argumento `'w'`{.python}).
 
 Após aberto em modo escrita, usamos a função `write` para escrever no arquivo
 
+\small
+
 ```python
 def escreve_arquivo(arquivo, linhas):
+    '''
+    String (nome de arquivo), Lista de strings -> None
+    '''
+    # f representa o arquivo aberto
     with open(arquivo, 'w') as f:
         for linha in linhas:
             f.write(linha)
-            # grava o símbolo de quebra de linha
+            # opcionalmente podemos escrever
+            # o símbolo de quebra de linha
             f.write('\n')
-    return linhas
 ```
 
 
@@ -361,13 +440,13 @@ def escreve_arquivo(arquivo, linhas):
 Após a execução de
 
 ```python
->>> escreve_arquivo('exemplo.txt',
+>>> escreve_arquivo('saida.txt',
                     ['Casa',
                      '23',
                      'outra coisa'])
 ```
 
-O conteúdo do arquivo `exemplo.txt` será
+O conteúdo do arquivo `saida.txt` será
 
 ```
 Casa
@@ -375,6 +454,15 @@ Casa
 outra coisa
 ```
 
+
+## Arquivos
+
+Para escrever números em arquivos temos que converter os números para string.
+Podemos usar as funções `str` ou `str.format`
+
+```python
+f.write('{} {}'.format(10, 20))
+```
 
 
 Parâmetros na linha de comando
@@ -426,9 +514,9 @@ if __name__ == "__main__":
 \normalsize
 
 - Os argumentos são armazenados como strings na lista `sys.argv` a partir da
-  posição 1
+  posição `1`{.python}
 
-- O valor na posição 0 de `sys.argv` é o nome do arquivo `.py`
+- O valor na posição `0`{.python} de `sys.argv` é o nome do arquivo `.py`
 
 
 ## Parâmetros na linha de comando
