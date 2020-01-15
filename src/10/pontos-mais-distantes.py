@@ -2,6 +2,7 @@ import sys
 
 
 def main():
+    # validacao do modo de uso
     if len(sys.argv) == 1:
         print('Este programa encontra os pontos mais distantes em um arquivo de pontos.')
         print('Especifique o arquivo com as coordenadas dos pontos como argumento para o programa.')
