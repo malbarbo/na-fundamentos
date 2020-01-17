@@ -403,7 +403,7 @@ Exemplo de como extrair dois número de uma linha
 
 ```python
 >>> linha = '10 34.0\n'
->>> nums = linha.strip()
+>>> nums = linha.split()
 >>> float(nums[0])
 10.0
 >>> float(nums[1])
