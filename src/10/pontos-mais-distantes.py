@@ -14,7 +14,8 @@ def main():
         sys.exit()
 
     # entrada
-    pontos = le_pontos_arquivo(sys.argv[1])
+    arquivo = sys.argv[1]
+    pontos = le_pontos_arquivo()
 
     # processamento
     a, b = pontos_mais_distantes(pontos)
@@ -63,18 +64,25 @@ def distancia(p1, p2):
 
 
 def le_pontos_arquivo(arquivo):
+    '''
+    String (nome do arquivo) -> Lista (float, float)
+    Le um arquivo de pontos. O arquivo deve conter dois números por linha.
+    '''
     with open(arquivo) as f:
         pontos = []
-        for linha in f.readlines():
+        for linha in f:
             x, y = linha.split()
             pontos.append((float(x), float(y)))
         return pontos
 
 
 def exibe_pontos_mais_distantes(a, b):
+    '''
+    (float, float), (float, float) -> None
+    '''
     print('Os pontos mais distantes são {} e {}.'.format(a, b))
     print('A distância entre eles é {}.'.format(distancia(a, b)))
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
