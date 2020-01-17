@@ -541,10 +541,7 @@ Para facilitar o uso do programa, é necessário validar os parâmetros e inform
 erros mais claros.
 
 
-Atividades
-==========
-
-## Atividades
+## Exemplo
 
 Escreva um programa que receba como argumento o nome de um arquivo de pontos
 cartesianos e mostre os dois pontos mais distantes e a distância entre eles. O
@@ -561,6 +558,27 @@ Execução do programa
 ```
 $ python3 pontos-mais-distantes.py pontos.txt
 ```
+
+
+Atividades
+==========
+
+## Atividades
+
+@. Faça um programa que indique se é mais vantajoso abastecer um carro com
+   álcool ou gasolina. Os seguintes dados devem ser informados pelo usuário:
+
+   - o rendimento do carro (em km por litro) quando abastecido com álcool
+   - o rendimento do carro (em km por litro) quando abastecido com gasolina
+   - o preço (em reais) do litro do álcool
+   - o preço (em reais) do litro da gasolina
+
+
+## Atividades
+
+@. Escreva um programa que receba como argumento pela linha de comando um
+número $n$ e um valor $\alpha$ e calcule usando séries os valores de $\sin
+\alpha$ e $\cos \alpha$ com $n$ casas de precisão.
 
 
 <!-- TODO: Adicionar referências -->
