@@ -1,6 +1,6 @@
 ---
 # vim: set spell spelllang=pt_br sw=4:
-title: Numpy e matplotlib
+title: Bibliotecas
 ---
 
 Introdução
@@ -29,13 +29,13 @@ Para usar as funções de uma biblioteca precisamos importá-la com a instruçã
 
 1. Para importar a função `testmod`{.python} da biblioteca `doctest`{.python}
 
-    ```
+    ```python
     from doctest import testmod
     ```
 
 2. Para importar a variável `sys.argv`{.python}
 
-    ```
+    ```python
     import sys
     ```
 
@@ -55,7 +55,13 @@ A biblioteca padrão do Python é bastante extensa
 
 - Um _slogan_ do Python é _baterias incluídas_
 
-Além disso, muitas bibliotecas externas estão disponíveis. Duas destas
+\pause
+
+Também podemos criar novas bibliotecas.
+
+\pause
+
+Por último, muitas bibliotecas externas estão disponíveis. Duas destas
 bibliotecas (incluídas com a instalação do editor mu) são
 
 - Numpy (computação científica)
