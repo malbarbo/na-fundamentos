@@ -8,17 +8,59 @@ Introdução
 
 ## Introdução
 
-- A biblioteca padrão do Python é bastante extensa
+Até o momento, a maioria das funções que usamos nós mesmos que escrevemos.
 
-    - Um _slogan_ do Python é _baterias incluídas_
+\pause
 
-- Além disso, muitas bibliotecas externas estão disponíveis
+Em programa reais, é comum o uso de muitas funções escritas por outras pessoas.
+Além de funções, também podemos utilizar variáveis e tipos definidos por outras
+pessoas. Estas definições são agrupadas em bibliotecas (módulos) propósitos
+específicos.
 
-- Duas destas bibliotecas (incluídas no editor mu) são
+\pause
 
-    - Numpy (computação científica)
+Veremos como usar bibliotecas existentes e como criar as nossas bibliotecas.
 
-    - matplotlib (geração de gráficos)
+
+## Introdução
+
+Para usar as funções de uma biblioteca precisamos importá-la com a instrução
+`import`{.python}. Já usamos a instrução `import`{.python} em duas situação
+
+1. Para importar a função `testmod`{.python} da biblioteca `doctest`{.python}
+
+    ```
+    from doctest import testmod
+    ```
+
+2. Para importar a variável `sys.argv`{.python}
+
+    ```
+    import sys
+    ```
+
+
+## Introdução
+
+As funções pré-definidas do Python, como `int`{.python}, `print`{.python},
+`len`{.python}, etc, podem ser usadas diretamente pois fazem parte de uma
+biblioteca chamada `builtins`{.python} que é importada implicitamente.
+
+Veja a lista de funções em \url{https://docs.python.org/3/library/functions.html}.
+
+
+## Introdução
+
+A biblioteca padrão do Python é bastante extensa
+
+- Um _slogan_ do Python é _baterias incluídas_
+
+Além disso, muitas bibliotecas externas estão disponíveis. Duas destas
+bibliotecas (incluídas com a instalação do editor mu) são
+
+- Numpy (computação científica)
+
+- matplotlib (geração de gráficos)
 
 
 
