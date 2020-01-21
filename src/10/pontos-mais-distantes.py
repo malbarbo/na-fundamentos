@@ -15,7 +15,7 @@ def main():
 
     # entrada
     arquivo = sys.argv[1]
-    pontos = le_pontos_arquivo()
+    pontos = le_pontos_arquivo(arquivo)
 
     # processamento
     a, b = pontos_mais_distantes(pontos)
