@@ -1,8 +1,8 @@
 all:
 	rm -rf ../target/creation/
 	mkdir -p ../target/creation/
-	PYTHONDONTWRITEBYTECODE=1 ./color-map.py
-	PYTHONDONTWRITEBYTECODE=1 ./gen.py \
+	QT_QPA_PLATFORM=offscreen PYTHONDONTWRITEBYTECODE=1 ./color-map.py
+	QT_QPA_PLATFORM=offscreen PYTHONDONTWRITEBYTECODE=1 ./gen.py \
 		circle.py \
 		ellipse.py \
 		triangle.py \
