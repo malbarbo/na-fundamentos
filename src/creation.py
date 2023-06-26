@@ -159,7 +159,8 @@ def create(world, to_draw, on_tick=None, ticks_per_second=None, on_key=None):
 # Implementation section
 
 import sys
-from typing import NamedTuple, List
+from dataclasses import dataclass, replace
+from typing import List
 from PyQt5.QtWidgets import QWidget, QApplication
 from PyQt5.QtGui import QPainter, QColor, QPen, QPolygon, QFont, QFontMetricsF, QPixmap
 from PyQt5.QtCore import QPoint, QTimer, Qt, QSize, QRect
@@ -173,14 +174,15 @@ class Mode:
     pass
 
 
-class Color(NamedTuple, Mode):
+@dataclass
+class Color(Mode):
     red: int
     green: int
     blue: int
     alpha: int = 255
 
     def with_alpha(self, alpha):
-        return self._replace(alpha=alpha)
+        return replace(self, alpha=alpha)
 
     def by_name(name):
         c = name.upper()
@@ -192,7 +194,8 @@ class Color(NamedTuple, Mode):
         return QColor(self.red, self.green, self.blue, self.alpha)
 
 
-class Fill(NamedTuple, Mode):
+@dataclass
+class Fill(Mode):
     color: Color
 
 
@@ -229,7 +232,8 @@ class Image:
     pass
 
 
-class Square(NamedTuple, Image):
+@dataclass
+class Square(Image):
     side: float
     mode: Mode
 
@@ -246,7 +250,8 @@ class Square(NamedTuple, Image):
         painter.drawRect(origin[0], origin[1], self.side, self.side)
 
 
-class Rectangle(NamedTuple, Image):
+@dataclass
+class Rectangle(Image):
     width: float
     height: float
     mode: Mode
@@ -256,7 +261,8 @@ class Rectangle(NamedTuple, Image):
         painter.drawRect(origin[0], origin[1], self.width, self.height)
 
 
-class Triangle(NamedTuple, Image):
+@dataclass
+class Triangle(Image):
     side: float
     mode: Mode
 
@@ -280,7 +286,8 @@ class Triangle(NamedTuple, Image):
         painter.drawPolygon(points)
 
 
-class Circle(NamedTuple, Image):
+@dataclass
+class Circle(Image):
     radius: float
     mode: Mode
 
@@ -297,7 +304,8 @@ class Circle(NamedTuple, Image):
         painter.drawEllipse(origin[0], origin[1], self.width, self.height)
 
 
-class Ellipse(NamedTuple, Image):
+@dataclass
+class Ellipse(Image):
     width: float
     height: float
     mode: Mode
@@ -307,7 +315,8 @@ class Ellipse(NamedTuple, Image):
         painter.drawEllipse(origin[0], origin[1], self.width, self.height)
 
 
-class Text(NamedTuple, Image):
+@dataclass
+class Text(Image):
     text: str
     size: float
     color: Color
@@ -332,7 +341,8 @@ class Text(NamedTuple, Image):
                          self.height - self.height / 4, self.text)
 
 
-class Pixmap(NamedTuple, Image):
+@dataclass
+class Pixmap(Image):
     pixmap: QPixmap
 
     @property
@@ -361,7 +371,8 @@ def _pixmap(path):
 # TODO: create OverlayXY
 
 
-class Beside(NamedTuple, Image):
+@dataclass
+class Beside(Image):
     align: str
     images: List[Image]
 
@@ -383,7 +394,8 @@ class Beside(NamedTuple, Image):
             dx += image.width
 
 
-class Above(NamedTuple, Image):
+@dataclass
+class Above(Image):
     align: str
     images: List[Image]
 
@@ -405,7 +417,8 @@ class Above(NamedTuple, Image):
             dy += image.height
 
 
-class Overlay(NamedTuple, Image):
+@dataclass
+class Overlay(Image):
     x_align: str
     y_align: str
     images: List[Image]
@@ -428,7 +441,8 @@ class Overlay(NamedTuple, Image):
                                  origin[1] + dy(h, image.height)))
 
 
-class Place(NamedTuple, Image):
+@dataclass
+class Place(Image):
     image: Image
     x_align: str
     x: float
